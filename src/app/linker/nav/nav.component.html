@@ -1,0 +1,67 @@
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;">
+        <span class="logo navLogo"><a href="#">zanbnb</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">zanbnb</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#banner" id="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#gallary">Gallary</a></li>
+                <li><a href="#review">Review</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <i class='bx bx-user user' (click)="open(content)"></i>
+                <!-- <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+               </div>
+                <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Log-In</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <mat-form-field class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Ex. abc@gmail.com" type="email">
+                      </mat-form-field>
+                      <!--  -->
+                      <mat-form-field class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" type="password">
+                      </mat-form-field>
+                      <!--  -->
+                      <a href="#" style="text-decoration: none;">Haven't an account??</a>
+                      <br>
+                      <a href="#" style="text-decoration: none;">Forget Password</a>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Login</button>
+        </div>
+    </ng-template>
+
+</nav>
