@@ -22,6 +22,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 :root{
     --body-color: #E4E9F7;
     --nav-color: #00CED1;
+    --foot-color: #036666c0;
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
