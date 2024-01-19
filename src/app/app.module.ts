@@ -19,7 +19,7 @@ import {MatInputModule} from '@angular/material/input';
     NavComponent,
     LinkerComponent,
     LandingComponent,
-    LoginComponent,
+    LoginComponent
    
   ],
   imports: [

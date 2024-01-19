@@ -7,7 +7,7 @@ const routes: Routes = [
   {path:'',component:LinkerComponent,
   children:[
     {path:'',component:LandingComponent},
-    {}
+
   ]
 }
 ];
