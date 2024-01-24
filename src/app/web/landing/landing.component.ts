@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+  selectedContent: string | null = null;
+
+  selectContent(content: string) {
+    this.selectedContent = content;
+  }
+
   showShoppingContent = false;
 
   toggleShoppingContent() {
