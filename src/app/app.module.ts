@@ -10,6 +10,8 @@ import { LinkerComponent } from './linker/linker/linker.component';
 import { LandingComponent } from './web/landing/landing.component';
 import { LoginComponent } from './forms/login/login.component';
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import { AssestsComponent } from './assets/assests/assests.component';
 
 
 @NgModule({
@@ -19,13 +21,15 @@ import {MatInputModule} from '@angular/material/input';
     NavComponent,
     LinkerComponent,
     LandingComponent,
-    LoginComponent
+    LoginComponent,
+    AssestsComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatInputModule,
+    MatCardModule,
     BrowserAnimationsModule
   ],
   providers: [

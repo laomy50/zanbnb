@@ -133,7 +133,534 @@
   </div>
 <!-- //about -->
 
+<!-- card -->
+<mat-card  style="padding: 10px;">
+    <ul>
+        <li><a (click)="toggleRentContent()" style="cursor: pointer;"><i class="nav-icon">🏠</i><br>Rent</a></li>
+        <li><a (click)="toggleShoppingContent()" style="cursor: pointer;"><i class="nav-icon">🛒</i><br>Shopping</a></li>
+        <li><a (click)="toggleSpeciesContent()" style="cursor: pointer;"><i class="nav-icon">🌶️</i><br>Spices</a></li>
+        <li><a (click)="toggleRestaurantsContent()" style="cursor: pointer;"><i class="nav-icon">🍽️</i><br>Restaurants</a></li>
+        <li><a (click)="toggleHotelsContent()" style="cursor: pointer;"><i class="nav-icon">🏨</i><br>Hotels</a></li>
+        <li><a (click)="toggleHistoricalContent()" style="cursor: pointer;"><i class="nav-icon">🏰</i><br>Historical Sites</a></li>
+        <li><a (click)="toggleSportContent()" style="cursor: pointer;"><i class="nav-icon">⚽</i><br>Sports</a></li>
+        <li><a (click)="toggleTransportContent()" style="cursor: pointer;"><i class="nav-icon">🚗</i><br>Transports</a></li>
+        <li><a (click)="toggleForestContent()" style="cursor: pointer;"><i class="nav-icon">🌳</i><br>Forest</a></li>
+        <li><a (click)="toggleBeachContent()" style="cursor: pointer;"><i class="nav-icon">🏖️</i><br>Beach</a></li>
+        <li><a (click)="toggleLocationContent()" style="cursor: pointer;"><i class="nav-icon">📍</i><br>Location</a></li>
+        <li><a (click)="toggleTripsContent()" style="cursor: pointer;"><i class="nav-icon">✈️</i><br>Trips</a></li>
+      </ul>
+</mat-card>
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showShoppingContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/kanga.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/ukili.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/dera.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/duka.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
 
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showBeachContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/kendwa.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/jambiani.webp">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-4 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/mantar.jpeg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/duka.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div> -->
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showForestContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/ngezi.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/jozani.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-4 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/masingini.jpeg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/duka.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div> -->
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showTransportContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/alphard.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-4 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/Toyota-Coaster.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-4 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/toyotaprado.jpeg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+           
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showHistoricalContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/ngome.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/mkunazn.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/sultans.jpeg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/miza.webp">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showRestaurantsContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/rest1.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/lukrest.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/rest2.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/rest3.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showHotelsContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/melia.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/sahari.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/stont.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/zanziblue.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showSpeciesContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/spec1.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/spec2.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/spec4.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/spec5.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showSportContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/waterbt.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/snorking.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/boat.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/parasa.jpeg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showTripsContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/kanga.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/ukili.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/dera.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/duka.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showLocationContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/kanga.jpeg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/ukili.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/dera.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/duka.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- card for images -->
+<div class="container mt-4 mb-4" *ngIf="showRentContent">
+    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/paje3b3ba.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-3 mt-3">
+            <div class="cardbox">
+                <img src="../../../assets/kiwengwa3bed.jpg">
+                <h1></h1>
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/Jambiani3be2ba.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 mt-3">
+                    <div class="cardbox">
+                        <img src="../../../assets/mileleVilla.jpg">
+                        <h1></h1>
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+    <a routerLink="/menu" class="viewmore">View more<i class="bi bi-arrow-right"></i></a>
+</div>
+<!-- //end card -->
+<!-- // -->
 
         <!-- Service Start -->
         <div class="container-xxl py-5" id="services">
