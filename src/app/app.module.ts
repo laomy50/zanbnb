@@ -12,6 +12,7 @@ import { LoginComponent } from './forms/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { AssestsComponent } from './assets/assests/assests.component';
+import { RegComponent } from './forms/reg/reg.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AssestsComponent } from './assets/assests/assests.component';
     LinkerComponent,
     LandingComponent,
     LoginComponent,
-    AssestsComponent
+    AssestsComponent,
+    RegComponent
    
   ],
   imports: [

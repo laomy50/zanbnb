@@ -72,6 +72,17 @@ export class NavComponent {
 		);
 	}
 
+  opens(content1: TemplateRef<any>) {
+		this.modalService.open(content1, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+			(result) => {
+				this.closeResult = `Closed with: ${result}`;
+			},
+			(reason) => {
+				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+			},
+		);
+	}
+
 	private getDismissReason(reason: any): string {
 		switch (reason) {
 			case ModalDismissReasons.ESC:

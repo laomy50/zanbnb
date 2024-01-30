@@ -1,8 +1,8 @@
 <nav>
     <div class="nav-bar">
         <i class='bx bx-menu sidebarOpen' ></i>
-        <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;">
-        <span class="logo navLogo"><a href="#">zanbnb</a></span>
+        <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;margin-top: -0.8rem;">
+        <span class="logo navLogo" style="margin-top: -0.8rem;"><a href="#">zanbnb</a></span>
         <div class="menu">
             <div class="logo-toggle">
                 <span class="logo"><a href="#">zanbnb</a></span>
@@ -11,16 +11,16 @@
             <ul class="nav-links">
                 <li><a href="#banner" id="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#gallary">Gallary</a></li>
+                <li><a href="#discover">Packages</a></li>
+                <li><a href="#discover">Gallary</a></li>
                 <li><a href="#review">Review</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <div class="darkLight-searchBox">
-            <div class="dark-light">
-                <i class='bx bx-user user' (click)="open(content)"></i>
+        <div class="darkLight-searchBox" style="margin-top: -0.8rem;">
+            <div class="searchBox">
+                <i class='bx bx-user user' (click)="open(content)" style="color: white;cursor: pointer;"></i>
                 <!-- <i class='bx bx-sun sun'></i> -->
             </div>
             <div class="searchBox">
@@ -53,7 +53,7 @@
                         <input matInput placeholder="Password" type="password">
                       </mat-form-field>
                       <!--  -->
-                      <a href="#" style="text-decoration: none;">Haven't an account??</a>
+                      <a href="#" style="text-decoration: none;" (click)="opens(content1)">Haven't an account??</a>
                       <br>
                       <a href="#" style="text-decoration: none;">Forget Password</a>
                 </div>
@@ -61,6 +61,43 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Login</button>
+        </div>
+    </ng-template>
+
+    <ng-template #content1 let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Log-In</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <mat-form-field class="full-width">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="F.Name" type="text">
+                      </mat-form-field>
+                      <!--  -->
+                      <mat-form-field class="full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="L.Name" type="text">
+                      </mat-form-field>
+                      <!--  -->
+                    <mat-form-field class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Ex. abc@gmail.com" type="email">
+                      </mat-form-field>
+                      <!--  -->
+                      <mat-form-field class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" type="password">
+                      </mat-form-field>
+                      <!--  -->
+                   
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Register</button>
         </div>
     </ng-template>
 
