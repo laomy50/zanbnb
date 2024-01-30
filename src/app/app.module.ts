@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { AssestsComponent } from './assets/assests/assests.component';
 import { RegComponent } from './forms/reg/reg.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { RegComponent } from './forms/reg/reg.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModalModule,
     MatInputModule,
     MatCardModule,
     BrowserAnimationsModule

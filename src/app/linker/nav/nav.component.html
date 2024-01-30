@@ -1,40 +1,63 @@
-<nav>
-    <div class="nav-bar">
-        <i class='bx bx-menu sidebarOpen' ></i>
-        <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;margin-top: -0.8rem;">
-        <span class="logo navLogo" style="margin-top: -0.8rem;"><a href="#">zanbnb</a></span>
-        <div class="menu">
-            <div class="logo-toggle">
-                <span class="logo"><a href="#">zanbnb</a></span>
-                <i class='bx bx-x siderbarClose'></i>
+   
+    <!-- Header Start -->
+    <div class="container-fluid  px-0">
+        <div class="row gx-0">
+            <div class="col-lg-3  d-none d-lg-block" style="background: var(--nav-color);">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;">
+                    <h1 class="m-0 " style="color: white;">&nbsp;&nbsp;zanbnb</h1>
+                </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#banner" id="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#discover">Packages</a></li>
-                <li><a href="#discover">Gallary</a></li>
-                <li><a href="#review">Review</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="darkLight-searchBox" style="margin-top: -0.8rem;">
-            <div class="searchBox">
-                <i class='bx bx-user user' (click)="open(content)" style="color: white;cursor: pointer;"></i>
-                <!-- <i class='bx bx-sun sun'></i> -->
-            </div>
-            <div class="searchBox">
-               <div class="searchToggle">
-                <i class='bx bx-x cancel'></i>
-                <i class='bx bx-search search'></i>
-               </div>
-                <div class="search-field">
-                    <input type="text" placeholder="Search...">
-                    <i class='bx bx-search'></i>
+            <div class="col-lg-9">
+                <div class="row gx-0 bg-white d-none d-lg-flex">
+                    <div class="col-lg-7 px-5 text-start">
+                        <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <p class="mb-0">{{"omaromarbcs@gmail.com"}}</p>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2">
+                            <i class="fa fa-phone-alt text-primary me-2"></i>
+                            <p class="mb-0">+255748088569</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 px-5 text-end">
+                        <div class="d-inline-flex align-items-center py-2">
+                            <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="" href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0" style="background: var(--nav-color);">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                      
+                        <h1 class="m-0 " style="color: white;">  <img src="../../../assets/znz.jpg" alt="" style="height:2rem;border-radius: 50%;">&nbsp;&nbsp;zanbnb</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="#banner" id="#" class="nav-item nav-link active">Home</a>
+                            <a href="#about"  class="nav-item nav-link">About</a>
+                            <a href="#discover"  class="nav-item nav-link">Packages</a>
+                            <a href="#discover"  class="nav-item nav-link">Gallary</a>
+                            <a href="#review"  class="nav-item nav-link">Review</a>
+                            <a href="#services"  class="nav-item nav-link">Services</a>
+                            <a href="#contact"  class="nav-item nav-link">Contact</a>
+
+                           
+                        </div>
+                        <a (click)="open(content)"  class="nav-item nav-link" style="color: white;cursor: pointer;margin-right: 1rem;">Login</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
+    <!-- Header End -->
+
     <ng-template #content let-modal>
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Log-In</h4>
@@ -43,17 +66,21 @@
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                    <mat-form-field class="full-width">
+                    <div class="single-column">
+                    <mat-form-field class="full-width" style="width: 100%;">
                         <mat-label>Email</mat-label>
                         <input matInput placeholder="Ex. abc@gmail.com" type="email">
                       </mat-form-field>
+                      </div>
                       <!--  -->
-                      <mat-form-field class="full-width">
+                      <div class="single-column">
+                      <mat-form-field class="full-width" style="width: 100%;">
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Password" type="password">
                       </mat-form-field>
+                      </div>
                       <!--  -->
-                      <a href="#" style="text-decoration: none;" (click)="opens(content1)">Haven't an account??</a>
+                      <a href="#" style="text-decoration: none;" (click)="opens(contents)">Haven't an account??</a>
                       <br>
                       <a href="#" style="text-decoration: none;">Forget Password</a>
                 </div>
@@ -64,7 +91,7 @@
         </div>
     </ng-template>
 
-    <ng-template #content1 let-modal>
+    <ng-template #contents let-modal>
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Log-In</h4>
             <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
@@ -72,33 +99,36 @@
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                    <mat-form-field class="full-width">
-                        <mat-label>First Name</mat-label>
-                        <input matInput placeholder="F.Name" type="text">
-                      </mat-form-field>
-                      <!--  -->
-                      <mat-form-field class="full-width">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="L.Name" type="text">
-                      </mat-form-field>
-                      <!--  -->
-                    <mat-form-field class="full-width">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Ex. abc@gmail.com" type="email">
-                      </mat-form-field>
-                      <!--  -->
-                      <mat-form-field class="full-width">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" type="password">
-                      </mat-form-field>
-                      <!--  -->
-                   
+                    <div class="single-column">
+                        <mat-form-field class="full-width" style="width: 100%;">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="F.Name" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="single-column">
+                        <mat-form-field class="full-width" style="width: 100%;">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="L.Name" type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="single-column">
+                        <mat-form-field class="full-width" style="width: 100%;">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Ex. abc@gmail.com" type="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="single-column">
+                        <mat-form-field class="full-width" style="width: 100%;">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Password" type="password">
+                        </mat-form-field>
+                    </div>
+                  
                 </div>
             </form>
+            
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Register</button>
         </div>
     </ng-template>
-
-</nav>

@@ -59,11 +59,39 @@
                             <div class="footer-menu">
                                 <a style="text-decoration: none;" href="#banner">Home</a>
                                 <a style="text-decoration: none;" href="">Help</a>
-                                <a style="text-decoration: none;" href="">FQAs</a>
+                                <a style="text-decoration: none;" (click)="open(content)">FQAs</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title">FAQs</h4>
+              <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Your FAQ content can go here -->
+              <div class="faq-item">
+                <h5 class="question">How do I book a stay?</h5>
+                <p class="answer">To book a stay, simply search for your desired location, dates, and preferences on our website or app. Once you find a listing you like, click on it to view more details and then click "Book" to proceed with the reservation process.</p>
+              </div>
+              <div class="faq-item">
+                <h5 class="question">What are the check-in and check-out times?</h5>
+                <p class="answer">Check-in and check-out times vary depending on the host and property. You can find this information on the listing page under the "House Rules" section. Hosts may also offer flexible check-in and check-out options, so be sure to communicate with them if you have specific timing requirements.</p>
+              </div>
+              <div class="faq-item">
+                <h5 class="question">Can I cancel my reservation?</h5>
+                <p class="answer">Cancellation policies vary depending on the host and property. You can find the cancellation policy for each listing on the listing page under the "Cancellation Policy" section. Be sure to review the policy before booking, and if you need to cancel, you can do so through your Airbnb account.</p>
+              </div>
+              <!-- Add more FAQ items as needed -->
+            </div>
+          </ng-template>
+          
+    
         <!-- Footer End -->
+
+          

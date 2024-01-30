@@ -122,7 +122,7 @@
   <p>
     From cozy apartments to luxurious villas, our platform offers a diverse range of
     accommodations to suit every traveler's needs. Whether you're an adventurer seeking
-    thrills or a family looking for a home away from home, Airbnb has something for everyone.
+    thrills or a family looking for a home away from home, Zanbnb has something for everyone.
   </p>
   </div>
   </div>
@@ -136,26 +136,26 @@
 <!-- card -->
 <mat-card  style="padding: 10px;" id="discover">
     <ul>
-        <li><a (click)="selectContent('rent')"style="cursor: pointer;"><i class="nav-icon">🏠</i><br>Rent</a></li>
-        <li><a (click)="selectContent('shopping')" style="cursor: pointer;"><i class="nav-icon">🛒</i><br>Shopping</a></li>
-        <li><a (click)="selectContent('spicies')" style="cursor: pointer;"><i class="nav-icon">🌶️</i><br>Spices</a></li>
-        <li><a (click)="selectContent('restaurant')" style="cursor: pointer;"><i class="nav-icon">🍽️</i><br>Restaurants</a></li>
-        <li><a (click)="selectContent('hotel')" style="cursor: pointer;"><i class="nav-icon">🏨</i><br>Hotels</a></li>
-        <li><a (click)="selectContent('historical')" style="cursor: pointer;"><i class="nav-icon">🏰</i><br>Historical Sites</a></li>
-        <li><a (click)="selectContent('sport')" style="cursor: pointer;"><i class="nav-icon">⚽</i><br>Sports</a></li>
-        <li><a (click)="selectContent('transport')" style="cursor: pointer;"><i class="nav-icon">🚗</i><br>Transports</a></li>
-        <li><a (click)="selectContent('forest')" style="cursor: pointer;"><i class="nav-icon">🌳</i><br>Forest</a></li>
-        <li><a (click)="selectContent('beach')" style="cursor: pointer;"><i class="nav-icon">🏖️</i><br>Beach</a></li>
+        <li><a href="#rent" (click)="selectContent('rent')"style="cursor: pointer;color:black;"><i class="nav-icon">🏠</i><br>Rent</a></li>
+        <li><a href="#shop" (click)="selectContent('shopping')" style="cursor: pointer;color:black;"><i class="nav-icon">🛒</i><br>Shopping</a></li>
+        <li><a href="#spicy" (click)="selectContent('spicies')" style="cursor: pointer;color:black;"><i class="nav-icon">🌶️</i><br>Spices</a></li>
+        <li><a href="#restaurant" (click)="selectContent('restaurant')" style="cursor: pointer;color:black;"><i class="nav-icon">🍽️</i><br>Restaurants</a></li>
+        <li><a href="#hotel" (click)="selectContent('hotel')" style="cursor: pointer;color:black;"><i class="nav-icon">🏨</i><br>Hotels</a></li>
+        <li><a href="#history" (click)="selectContent('historical')" style="cursor: pointer;color:black;"><i class="nav-icon">🏰</i><br>Historical Sites</a></li>
+        <li><a href="#sport" (click)="selectContent('sport')" style="cursor: pointer;color:black;"><i class="nav-icon">⚽</i><br>Sports</a></li>
+        <li><a href="#transport" (click)="selectContent('transport')" style="cursor: pointer;color:black;"><i class="nav-icon">🚗</i><br>Transports</a></li>
+        <li><a href="#forest" (click)="selectContent('forest')" style="cursor: pointer;color:black;"><i class="nav-icon">🌳</i><br>Forest</a></li>
+        <li><a href="#beach" (click)="selectContent('beach')" style="cursor: pointer;color:black;"><i class="nav-icon">🏖️</i><br>Beach</a></li>
         <!-- <li><a (click)="toggleLocationContent()" style="cursor: pointer;"><i class="nav-icon">📍</i><br>Location</a></li> -->
-        <li><a (click)="selectContent('trip')" style="cursor: pointer;"><i class="nav-icon">✈️</i><br>Trips</a></li>
+        <li><a href="#trip" (click)="selectContent('trip')" style="cursor: pointer;color:black;"><i class="nav-icon">✈️</i><br>Trips</a></li>
         
       </ul>
 </mat-card>
 
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'shopping'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'shopping'" id="shop">
+    <h1 class="text-center">Shopping <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
     
         <div class="col-lg-3 mt-3">
@@ -218,8 +218,8 @@
 
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'beach'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'beach'" id="beach">
+    <h1 class="text-center">Beaches <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
      
         <div class="col-lg-4 mt-3">
@@ -275,8 +275,8 @@
 
 <!-- //end card -->
 <!-- card for images -->
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'forest'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'forest'" id="forest">
+    <h1 class="text-center">Forest <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-4 mt-3">
             <div class="cardbox">
@@ -331,8 +331,8 @@
 
 <!-- //end card -->
 <!-- card for images -->
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'transport'" >
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'transport'" id="transport">
+    <h1 class="text-center">Transport <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-4 mt-3">
             <div class="cardbox">
@@ -380,8 +380,8 @@
 <!-- //end card -->
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'historical'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'historical'" id="history">
+    <h1 class="text-center">Historical Site <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3">
             <div class="cardbox">
@@ -440,8 +440,8 @@
 
 <!-- //end card -->
 <!-- card for images -->
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'restaurant'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'restaurant'" id="restaurant">
+    <h1 class="text-center">Restaurant <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3">
             <div class="cardbox">
@@ -499,8 +499,8 @@
 </div>
 <!-- //end card -->
 <!-- card for images -->
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'hotel'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'hotel'" id="hotel">
+    <h1 class="text-center">Hotels <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3">
             <div class="cardbox">
@@ -559,8 +559,8 @@
 <!-- //end card -->
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'spicies'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'spicies'" id="spicy">
+    <h1 class="text-center">Spicies <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-4 mt-3">
             <div class="cardbox">
@@ -613,8 +613,8 @@
 <!-- //end card -->
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'sport'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'sport'" id="sport">
+    <h1 class="text-center">Sports <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
       <div class="col-lg-3 mt-3">
         <div class="cardbox">
@@ -674,8 +674,8 @@
 <!-- //end card -->
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'trip'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'trip'" id="trip">
+    <h1 class="text-center">Trips <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
       <div class="col-lg-4 mt-3">
         <div class="cardbox">
@@ -779,8 +779,8 @@
 <!-- //end card -->
 <!-- card for images -->
 
-<div class="container mt-4 mb-4" *ngIf="selectedContent === 'rent'">
-    <h1 class="text-center">Customers <span class="highlight">Favorite Packages</span></h1>
+<div class="container mt-4 mb-4" *ngIf="selectedContent === 'rent'" id="rent">
+    <h1 class="text-center">Rents <span class="highlight">Favorite Packages</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3">
             <div class="cardbox">
