@@ -28,7 +28,7 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-dark fw-medium text-start text-primary text-uppercase mb-4" style="font-size:small;">Company</h6>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">About Us</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#about">About Us</a>
                                 <a style="text-decoration: none;" class="btn btn-link" target="_blank" href="https://api.whatsapp.com/send?phone=255748088569">Contact Us</a>
                                 <a style="text-decoration: none;" class="btn btn-link" href="">Privacy Policy</a>
                                 <a style="text-decoration: none;" class="btn btn-link" href="">Terms & Condition</a>
@@ -36,11 +36,11 @@
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-dark fw-medium text-start text-primary text-uppercase mb-4" style="font-size:small;">Services</h6>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">Food & Restaurant</a>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">Spa & Fitness</a>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">Sports & Gaming</a>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">Event & Party</a>
-                                <a style="text-decoration: none;" class="btn btn-link" href="">GYM & Yoga</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#fr">Food & Restaurant</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#sf">Spa & Fitness</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#sg">Sports & Gaming</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#ep">Event & Party</a>
+                                <a style="text-decoration: none;" class="btn btn-link" href="#gy">GYM & Yoga</a>
                             </div>
                         </div>
                     </div>
@@ -58,8 +58,7 @@
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a style="text-decoration: none;" href="#banner">Home</a>
-                                <a style="text-decoration: none;" href="">Help</a>
-                                <a style="text-decoration: none;" (click)="open(content)">FQAs</a>
+                                <!-- <a style="text-decoration: none;" (click)="open(content)">FQAs</a> -->
                             </div>
                         </div>
                     </div>
@@ -68,13 +67,13 @@
         </div>
 
 
-        <ng-template #content let-modal>
+        <!-- <ng-template #content let-modal>
             <div class="modal-header">
               <h4 class="modal-title">FAQs</h4>
               <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
             </div>
             <div class="modal-body">
-              <!-- Your FAQ content can go here -->
+            
               <div class="faq-item">
                 <h5 class="question">How do I book a stay?</h5>
                 <p class="answer">To book a stay, simply search for your desired location, dates, and preferences on our website or app. Once you find a listing you like, click on it to view more details and then click "Book" to proceed with the reservation process.</p>
@@ -87,9 +86,9 @@
                 <h5 class="question">Can I cancel my reservation?</h5>
                 <p class="answer">Cancellation policies vary depending on the host and property. You can find the cancellation policy for each listing on the listing page under the "Cancellation Policy" section. Be sure to review the policy before booking, and if you need to cancel, you can do so through your Airbnb account.</p>
               </div>
-              <!-- Add more FAQ items as needed -->
+              
             </div>
-          </ng-template>
+          </ng-template> -->
           
     
         <!-- Footer End -->
