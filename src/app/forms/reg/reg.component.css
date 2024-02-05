@@ -1,0 +1,10 @@
+
+.register-box {
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 50px; 
+}
+
+.custom-width {
+    width: 100%; 
+}

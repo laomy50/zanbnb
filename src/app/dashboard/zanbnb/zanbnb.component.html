@@ -1,0 +1,65 @@
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background-color:#00CED1;">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>directions_car</mat-icon>
+        Trips
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>account_circle</mat-icon>
+        Account
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>message</mat-icon>
+        Messages
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>notifications</mat-icon>
+        Notifications
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>visibility</mat-icon>
+        WatchList
+      </a>
+      <a mat-list-item routerLink="/memberArea/help">
+        <mat-icon>help</mat-icon>
+        Help Center
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </a>
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:#00CED1;">
+      @if (isHandset$ | async) {
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      }
+      <span>zanbnb</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div style="padding: 10px;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

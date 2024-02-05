@@ -14,6 +14,16 @@ import {MatCardModule} from '@angular/material/card';
 import { AssestsComponent } from './assets/assests/assests.component';
 import { RegComponent } from './forms/reg/reg.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ZanbnbComponent } from './dashboard/zanbnb/zanbnb.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HelpsComponent } from './dashboard/pages/helps/helps.component';
+
 
 
 @NgModule({
@@ -25,16 +35,25 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     LandingComponent,
     LoginComponent,
     AssestsComponent,
-    RegComponent
+    RegComponent,
+    ZanbnbComponent,
+    HelpsComponent,
    
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     NgbModalModule,
     MatInputModule,
     MatCardModule,
-    BrowserAnimationsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     provideClientHydration()

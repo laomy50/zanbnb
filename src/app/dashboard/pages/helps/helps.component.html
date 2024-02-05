@@ -1,0 +1,12 @@
+<h2>Frequently Asked Questions</h2>
+<div *ngFor="let faq of faqData">
+  <div class="faq-item">
+    <div class="question">
+      <i class="fas fa-question-circle"></i>
+      {{ faq.question }}
+    </div>
+    <div class="answer">
+      {{ faq.answer }}
+    </div>
+  </div>
+</div>

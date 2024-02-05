@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class RegComponent {
 
+  
+  username!: string;
+  fname!: string;
+  lname!: string;
+  email!: string;
+  password!: string;
+
+  constructor() { }
+
+  reg() {
+    console.log('Login button clicked');
+  }
 }
