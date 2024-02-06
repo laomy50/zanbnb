@@ -1,0 +1,100 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    
+  }
+  .steps-container{
+    background:#fff;
+    color: #fff;
+    box-shadow: 0 1px 2px #ccc;
+  }
+  
+  .steps-container input[type='radio']:checked ~ .description{
+    height: 130px;
+    transition: .3s ease-in;
+  }
+  
+  .steps-container input[type='radio']{
+    width: 100%;
+    display: none;
+  }
+  .steps-container label{
+    width: 100%;
+    max-width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    border-bottom:1px solid #ccc;
+    position:relative;
+  }
+  .steps-container label:before,
+  .steps-container label:after{
+    width:2px;
+    height:15px;
+    background:#fff;
+    display:inline-block;
+    position:absolute;
+    content:"";
+    z-index:99;
+    right:25px;
+    top:12px;
+    transform:rotate(90deg)
+  }
+  
+  .steps-container label:after{
+    transform:rotate(0deg)
+  }
+  .steps-container input[type='radio']:checked ~ label:after{
+    transform:rotate(90deg)
+  }
+  .steps-container input[type='radio']:checked ~ label{
+     cursor:default;
+  }
+  .steps-container label span{
+    font-weight: bold;
+    display: block;
+    padding: 10px 12px 12px 15px;
+    margin: 0;
+  }
+  .description{
+    background: #fff;
+    color: #222;
+    width: 100%;
+    height: 0;
+    padding-left: 15px;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: .4s ease-in-out;
+  } 
+  .description p{
+    line-height: 18px;
+    padding-right: 10px;
+  }
+  .steps-container label{
+      background: #5ba5a7;   
+  }
+  .steps-container label[for="step02"]{
+      background: #5dbbbd;   
+  }
+  .steps-container label[for="step03"]{
+      background: #5abbbd;   
+  }
+  .steps-container label[for="step04"]{
+      background: #4db4b6;   
+  }
+  .steps-container label[for="step05"]{
+      background: #58c2c4;   
+  }
+  .steps-container label[for="step06"]{
+      background: #3ec6c9;   
+  }
+  .steps-container label[for="step07"]{
+      background: #46d2d4;   
+  }
+  .steps-container label[for="step08"]{
+      background: #47cacc;   
+  }
+  .steps-container label[for="step09"]{
+      background: #3ac3c5;   
+  }
+  
