@@ -23,6 +23,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HelpsComponent } from './dashboard/pages/helps/helps.component';
+import { DashComponent } from './dashboard/pages/dash/dash.component';
+import { TripComponent } from './dashboard/pages/trip/trip.component';
+import { HomeComponent } from './dashboard/pages/home/home.component';
+import { AccountComponent } from './dashboard/pages/account/account.component';
+import { MessageComponent } from './dashboard/pages/message/message.component';
+import { NotificationComponent } from './dashboard/pages/notification/notification.component';
+import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.component';
+import { UploadComponent } from './dashboard/pages/upload/upload.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 
 
@@ -38,11 +48,21 @@ import { HelpsComponent } from './dashboard/pages/helps/helps.component';
     RegComponent,
     ZanbnbComponent,
     HelpsComponent,
+    DashComponent,
+    TripComponent,
+    HomeComponent,
+    AccountComponent,
+    MessageComponent,
+    NotificationComponent,
+    WatchlistComponent,
+    UploadComponent,
+
    
   ],
   imports: [
     CommonModule,
     BrowserModule,
+    MatGridListModule,
     AppRoutingModule,
     NgbModalModule,
     MatInputModule,
