@@ -32,6 +32,7 @@ import { NotificationComponent } from './dashboard/pages/notification/notificati
 import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.component';
 import { UploadComponent } from './dashboard/pages/upload/upload.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -73,7 +74,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
