@@ -8,3 +8,8 @@
 .custom-width {
     width: 100%; 
 }
+
+.custom-select-panel {
+    z-index: 9999; 
+  }
+  

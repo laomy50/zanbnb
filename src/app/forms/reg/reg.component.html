@@ -5,22 +5,32 @@
         </div>
         <div class="register-box-body">
             <p class="login-box-msg">Sign up to start your session</p>
-            <form (ngSubmit)="reg()" #loginForm="ngForm" novalidate>
+            <form (ngSubmit)="onSubmit()">
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control input-with-border" placeholder="F.Name" name="fname" [(ngModel)]="fname" required>
+                    <input type="text" class="form-control input-with-border" placeholder="F.Name" name="firstName" [(ngModel)]="user.firstName" required>
                 </div>
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control input-with-border" placeholder="L.Name" name="lname" [(ngModel)]="lname" required>
+                    <input type="text" class="form-control input-with-border" placeholder="L.Name" name="lastName" [(ngModel)]="user.lastName" required>
                 </div>
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control input-with-border" placeholder="Username" name="username" [(ngModel)]="username" required>
+                    <input type="text" class="form-control input-with-border" placeholder="Username" name="username" [(ngModel)]="user.username" required>
                 </div>
                 <div class="form-group mb-3">
-                    <input type="email" class="form-control input-with-border" placeholder="Email" name="email" [(ngModel)]="email" required>
+                    <input type="email" class="form-control input-with-border" placeholder="Email" name="email" [(ngModel)]="user.email" required>
                 </div>
                 <div class="form-group mb-3">
-                    <input type="password" class="form-control input-with-border" placeholder="Password" name="password" [(ngModel)]="password" required>
+                    <input type="password" class="form-control input-with-border" placeholder="Password" name="password" [(ngModel)]="user.password" required>
                 </div>
+                <div class="single-column" style="position: relative; z-index: 9999;">
+                    <mat-form-field class="full-width" style="width: 100%;">
+                      <mat-label>Membership Type</mat-label>
+                      <mat-select placeholder="Select Membership" name="membershipType" [(ngModel)]="user.role_id" required panelClass="custom-select-panel">
+                        <mat-option value="1">Client Member</mat-option>
+                        <mat-option value="2">Business Member</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  
                 <a routerLink="/login" style="text-decoration: none;">Haven an account??</a>
                 
                 <div class="form-group">

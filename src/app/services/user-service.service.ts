@@ -17,8 +17,8 @@ export class UserServiceService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  registerUser(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/register`, employee);
+  registerUser(users: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`, users);
   }
 
   updateUser(id: number, value: any): Observable<Object> {

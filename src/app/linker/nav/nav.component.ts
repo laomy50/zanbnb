@@ -1,20 +1,26 @@
-import { Component, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserServiceService } from '../../services/user-service.service';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { User } from '../../model/user';
 
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
+ 
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
 
   username!: string;
   password!: string;
   modalRef!: NgbModalRef;
+
+  user: User = new User();
+  submitted = false;
+
   
   closeResult = '';
 contents!: TemplateRef<any>;
@@ -22,6 +28,35 @@ contents!: TemplateRef<any>;
   constructor(private modalService: NgbModal,private userServiceService:UserServiceService,
     private router: Router,
     ){}
+
+  ngOnInit(): void {
+    
+  }
+
+  newUser(): void {
+    this.submitted = false;
+    this.user = new User();
+  }
+
+  save() {
+    this.userServiceService
+    .registerUser(this.user).subscribe(data => {
+      console.log(data)
+      this.user = new User();
+      this.gotoList();
+    }, 
+    error => console.log(error));
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this.save();  
+ 
+  }
+
+  gotoList() {
+    this.router.navigate(['/']);
+  }
 
   openi(content: TemplateRef<any>) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(

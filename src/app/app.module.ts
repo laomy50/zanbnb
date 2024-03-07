@@ -33,6 +33,8 @@ import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.compon
 import { UploadComponent } from './dashboard/pages/upload/upload.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 
 
@@ -75,7 +77,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [
     provideClientHydration()
