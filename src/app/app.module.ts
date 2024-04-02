@@ -35,6 +35,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { DragDirective } from './drag.directive';
 
 
 
@@ -59,6 +60,7 @@ import { MatOptionModule } from '@angular/material/core';
     NotificationComponent,
     WatchlistComponent,
     UploadComponent,
+    DragDirective,
 
    
   ],
@@ -79,7 +81,7 @@ import { MatOptionModule } from '@angular/material/core';
     MatListModule,
     HttpClientModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
   ],
   providers: [
     provideClientHydration()
