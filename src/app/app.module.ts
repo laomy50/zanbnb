@@ -36,6 +36,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { DragDirective } from './drag.directive';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ShoppComponent } from './dashboard/pages/uploads/shopp/shopp.component';
+import { SpiciesComponent } from './dashboard/pages/uploads/spicies/spicies.component';
+import { RestaurantComponent } from './dashboard/pages/uploads/restaurant/restaurant.component';
+import { HotelComponent } from './dashboard/pages/uploads/hotel/hotel.component';
+import { HistoricalComponent } from './dashboard/pages/uploads/historical/historical.component';
+import { SportComponent } from './dashboard/pages/uploads/sport/sport.component';
+import { TransportComponent } from './dashboard/pages/uploads/transport/transport.component';
+import { ForestComponent } from './dashboard/pages/uploads/forest/forest.component';
 
 
 
@@ -61,6 +70,14 @@ import { DragDirective } from './drag.directive';
     WatchlistComponent,
     UploadComponent,
     DragDirective,
+    ShoppComponent,
+    SpiciesComponent,
+    RestaurantComponent,
+    HotelComponent,
+    HistoricalComponent,
+    SportComponent,
+    TransportComponent,
+    ForestComponent,
 
    
   ],
@@ -82,6 +99,7 @@ import { DragDirective } from './drag.directive';
     HttpClientModule,
     MatSelectModule,
     MatOptionModule,
+    MatTabsModule,
   ],
   providers: [
     provideClientHydration()

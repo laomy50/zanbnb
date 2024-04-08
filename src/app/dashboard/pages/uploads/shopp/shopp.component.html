@@ -1,0 +1,74 @@
+
+
+   <div class="container mt-5">
+      <div class="card  p-2" >
+        <div class="row">
+          <div class="col-6">
+            <form #shoppForm="ngForm" (ngSubmit)="addShopp(shoppForm)">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Shopping Name"
+              type="text"
+              [(ngModel)]="shoppingPackage.shoppingName" name="shoppingName">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Location</mat-label>
+              <input matInput placeholder="Shopp Location"
+              type="text"
+              [(ngModel)]="shoppingPackage.shoppingLocation" name="shoppingLocation">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Price</mat-label>
+              <input matInput placeholder="shopping Price"
+              type="number"
+              [(ngModel)]="shoppingPackage.shoppingPrice" name="shoppingPrice">
+            </mat-form-field>
+
+            <div align ="end">
+              <button mat-stroked-button color="primary"  style="margin-right: 8px;">Clear</button>  
+              <button  mat-stroked-button color="primary" type="submit">Add Shopping</button>
+            </div>
+          </form>
+          </div>
+
+          <div class="col-6">
+            <div>
+
+              <div class="dropzone"
+              appDrag
+              (files)="fileDropped($event)"
+              >
+                <div class="text-wrapper">
+                  <div class="centered">
+                    Drag and drop your file or 
+                    <a (click)="selectFile.click()" class="browse-button">browse</a>
+                     a file
+                  </div>              
+                </div>
+              </div>
+
+              <input type="file" multiple value="select" #selectFile
+              style="display: none;"
+              (change)="onFileSelected($event)">
+            </div>
+            
+            <div class="mt-5">
+              <div class="row">
+                <mat-grid-list cols="4" rowHeight="1:1">
+                    <mat-grid-tile *ngFor="let file of shoppingPackage.shoppingImages; let i = index">
+                        <div style="position: relative;">
+                          <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                            <img [src]="file.url"  width="100px" height="100px">
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+   </div> 

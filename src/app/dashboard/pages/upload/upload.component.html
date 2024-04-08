@@ -41,6 +41,191 @@
   </div>
    -->
 
+   
+<h1 style="text-align: center; padding: 1em 0">Packages</h1>
+<div class="mat-elevation-z8" style="border-radius: 24px;">
+  <mat-tab-group fitInkBarToContent>
+    <!-- Rent -->
+    <mat-tab label="Rent">
+      <ng-template mat-tab-label>
+        <mat-icon>house</mat-icon>&nbsp;
+        <span>Rent Package</span>
+      </ng-template>
+      <div class="container mt-5">
+        <div class="card  p-2" >
+          <div class="row">
+            <div class="col-6">
+              <form #rentForm="ngForm" (ngSubmit)="addRent(rentForm)">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Rent Name"
+                type="text"
+                [(ngModel)]="rentPackage.rentName" name="rentName">
+              </mat-form-field>
+  
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Location</mat-label>
+                <input matInput placeholder="Rent Location"
+                type="text"
+                [(ngModel)]="rentPackage.rentLocation" name="rentLocation">
+              </mat-form-field>
+  
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Price</mat-label>
+                <input matInput placeholder="Rent Price"
+                type="number"
+                [(ngModel)]="rentPackage.rentPrice" name="rentPrice">
+              </mat-form-field>
+  
+              <div align ="end">
+                <button mat-stroked-button color="primary"  style="margin-right: 8px;">Clear</button>  
+                <button  mat-stroked-button color="primary" type="submit">Add Rent</button>
+              </div>
+            </form>
+            </div>
+  
+            <div class="col-6">
+              <div>
+  
+                <div class="dropzone"
+                appDrag
+                (files)="fileDropped($event)"
+                >
+                  <div class="text-wrapper">
+                    <div class="centered">
+                      Drag and drop your file or 
+                      <a (click)="selectFile.click()" class="browse-button">browse</a>
+                       a file
+                    </div>              
+                  </div>
+                </div>
+  
+                <input type="file" multiple value="select" #selectFile
+                style="display: none;"
+                (change)="onFileSelected($event)">
+              </div>
+              
+              <div class="mt-5">
+                <div class="row">
+                  <mat-grid-list cols="4" rowHeight="1:1">
+                      <mat-grid-tile *ngFor="let file of rentPackage.rentImages; let i = index">
+                          <div style="position: relative;">
+                            <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                              <img [src]="file.url"  width="100px" height="100px">
+                          </div>
+                      </mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+     </div>
+    </mat-tab>
+
+    <!--Shopping -->
+    <mat-tab label="Shopping">
+      <ng-template mat-tab-label>
+        <mat-icon>add_shopping_cart</mat-icon>&nbsp;
+        <span>Shopping Package</span>
+      </ng-template>
+      <br/>
+        <app-shopp/>
+    </mat-tab>
+
+    <!-- Spicies -->
+    <mat-tab label="Spicies">
+      <ng-template mat-tab-label>
+        <mat-icon>spa</mat-icon>&nbsp;
+        <span>Spicies Package</span>
+      </ng-template>
+      <br/>
+      <app-spicies/>
+    </mat-tab>
+
+    <!-- Restaurant -->
+    <mat-tab label="Restaurants">
+      <ng-template mat-tab-label>
+        <mat-icon>restaurant</mat-icon>&nbsp;
+        <span>Restaurants Package</span>
+      </ng-template>
+      <br/>
+      <app-restaurant/>
+    </mat-tab>
+
+    <!-- Hotel -->
+    <mat-tab label="Hotels">
+      <ng-template mat-tab-label>
+        <mat-icon>Hotel</mat-icon>&nbsp;
+        <span>Hotels Package</span>
+      </ng-template>
+        <br>
+        <app-hotel/>
+    </mat-tab>
+
+    <!-- History -->
+    <mat-tab label="Historical Site">
+      <ng-template mat-tab-label>
+        <mat-icon>history</mat-icon>&nbsp;
+        <span>Historical Site Package</span>
+      </ng-template>
+     <br/>
+     <app-historical/>
+    </mat-tab>
+
+    <!-- Sports -->
+    <mat-tab label="Sports">
+      <ng-template mat-tab-label>
+        <mat-icon>sports</mat-icon>&nbsp;
+        <span>Sports Package</span>
+      </ng-template>
+      <br>
+      <app-sport/>
+    </mat-tab>
+
+    <!-- transport -->
+    <mat-tab label="Transports">
+      <ng-template mat-tab-label>
+        <mat-icon>motorcycle</mat-icon>&nbsp;
+        <span>Transports Package</span>
+      </ng-template>
+     
+    </mat-tab>
+
+    <!-- Forest -->
+    <mat-tab label="Forest">
+      <ng-template mat-tab-label>
+        <mat-icon>forest</mat-icon>&nbsp;
+        <span>Forest Package</span>
+      </ng-template>
+     
+    </mat-tab>
+
+    <!-- Beach -->
+    <mat-tab label="Beach">
+      <ng-template mat-tab-label>
+        <mat-icon>water</mat-icon>&nbsp;
+        <span>Beach Package</span>
+      </ng-template>
+     
+    </mat-tab>
+
+    <!-- Trips -->
+    <mat-tab label="Trips">
+      <ng-template mat-tab-label>
+        <mat-icon>flight_land</mat-icon>&nbsp;
+        <span>Trips Package</span>
+      </ng-template>
+     
+    </mat-tab>
+  </mat-tab-group>
+  <br>
+</div>
+
+
+<!-- 
    <div class="container mt-5">
       <div class="card  p-2" >
         <div class="row">
@@ -78,7 +263,6 @@
             <div>
 
               <div class="dropzone"
-              style="display: none;"
               appDrag
               (files)="fileDropped($event)"
               >
@@ -92,7 +276,7 @@
               </div>
 
               <input type="file" multiple value="select" #selectFile
-              
+              style="display: none;"
               (change)="onFileSelected($event)">
             </div>
             
@@ -113,4 +297,4 @@
         </div>
 
       </div>
-   </div>
+   </div> -->

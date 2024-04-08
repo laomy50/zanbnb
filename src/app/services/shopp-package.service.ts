@@ -1,0 +1,17 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment.development';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ShoppPackageService {
+
+  private baseUrl = environment.baseUrl + '/shoppPackage';
+
+  constructor(private httpClient: HttpClient) { }
+
+  addShoppingPackage(shoppingPackage:FormData){
+    return this.httpClient.post(`${this.baseUrl}/addNewShoppPackage` ,shoppingPackage);
+  }
+}

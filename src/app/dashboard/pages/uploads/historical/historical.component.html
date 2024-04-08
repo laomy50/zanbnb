@@ -1,0 +1,73 @@
+
+<div class="container mt-5">
+    <div class="card  p-2" >
+      <div class="row">
+        <div class="col-6">
+          <form #restaurantForm="ngForm" (ngSubmit)="addHotel(restaurantForm)">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Historical Name"
+            type="text"
+            [(ngModel)]="historicalPackage.historicalName" name="historicalName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Historical Location"
+            type="text"
+            [(ngModel)]="historicalPackage.historicalLocation" name="historicalLocation">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Price</mat-label>
+            <input matInput placeholder="Historical Price"
+            type="number"
+            [(ngModel)]="historicalPackage.historicalPrice" name="historicalPrice">
+          </mat-form-field>
+
+          <div align ="end">
+            <button mat-stroked-button color="primary"  style="margin-right: 8px;">Clear</button>  
+            <button  mat-stroked-button color="primary" type="submit">Add Historical</button>
+          </div>
+        </form>
+        </div>
+
+        <div class="col-6">
+          <div>
+
+            <div class="dropzone"
+            appDrag
+            (files)="fileDropped($event)"
+            >
+              <div class="text-wrapper">
+                <div class="centered">
+                  Drag and drop your file or 
+                  <a (click)="selectFile.click()" class="browse-button">browse</a>
+                   a file
+                </div>              
+              </div>
+            </div>
+
+            <input type="file" multiple value="select" #selectFile
+            style="display: none;"
+            (change)="onFileSelected($event)">
+          </div>
+          
+          <div class="mt-5">
+            <div class="row">
+              <mat-grid-list cols="4" rowHeight="1:1">
+                  <mat-grid-tile *ngFor="let file of historicalPackage.historicalImages; let i = index">
+                      <div style="position: relative;">
+                        <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                          <img [src]="file.url"  width="100px" height="100px">
+                      </div>
+                  </mat-grid-tile>
+              </mat-grid-list>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+ </div> 
