@@ -3,31 +3,31 @@
     <div class="card  p-2" >
       <div class="row">
         <div class="col-6">
-          <form #forestForm="ngForm" (ngSubmit)="addForest(forestForm)">
+          <form #tripForm="ngForm" (ngSubmit)="addTrip(tripForm)">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>Name</mat-label>
-            <input matInput placeholder="Forest Name"
+            <input matInput placeholder="Trip Name"
             type="text"
-            [(ngModel)]="forestPackage.forestName" name="beaforestNamechName">
+            [(ngModel)]="tripPackage.tripName" name="tripName">
           </mat-form-field>
 
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>Location</mat-label>
-            <input matInput placeholder="Forest Location"
+            <input matInput placeholder="Trip Location"
             type="text"
-            [(ngModel)]="forestPackage.forestLocation" name="forestLocation">
+            [(ngModel)]="tripPackage.tripLocation" name="tripLocation">
           </mat-form-field>
 
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>Price</mat-label>
-            <input matInput placeholder="Forest Price"
+            <input matInput placeholder="Trip Price"
             type="number"
-            [(ngModel)]="forestPackage.forestPrice" name="forestPrice">
+            [(ngModel)]="tripPackage.tripPrice" name="tripPrice">
           </mat-form-field>
 
           <div align ="end">
             <button mat-stroked-button color="primary"  style="margin-right: 8px;">Clear</button>  
-            <button  mat-stroked-button color="primary" type="submit">Add Forest</button>
+            <button  mat-stroked-button color="primary" type="submit">Add Trip</button>
           </div>
         </form>
         </div>
@@ -56,7 +56,7 @@
           <div class="mt-5">
             <div class="row">
               <mat-grid-list cols="4" rowHeight="1:1">
-                  <mat-grid-tile *ngFor="let file of forestPackage.forestImages; let i = index">
+                  <mat-grid-tile *ngFor="let file of tripPackage.tripImages; let i = index">
                       <div style="position: relative;">
                         <span class="btn-remove-image" (click)="removeImages(i)">x</span>
                           <img [src]="file.url"  width="100px" height="100px">

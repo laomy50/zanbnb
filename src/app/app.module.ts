@@ -24,7 +24,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HelpsComponent } from './dashboard/pages/helps/helps.component';
 import { DashComponent } from './dashboard/pages/dash/dash.component';
-import { TripComponent } from './dashboard/pages/trip/trip.component';
 import { HomeComponent } from './dashboard/pages/home/home.component';
 import { AccountComponent } from './dashboard/pages/account/account.component';
 import { MessageComponent } from './dashboard/pages/message/message.component';
@@ -45,7 +44,22 @@ import { HistoricalComponent } from './dashboard/pages/uploads/historical/histor
 import { SportComponent } from './dashboard/pages/uploads/sport/sport.component';
 import { TransportComponent } from './dashboard/pages/uploads/transport/transport.component';
 import { ForestComponent } from './dashboard/pages/uploads/forest/forest.component';
-
+import { BeachComponent } from './dashboard/pages/uploads/beach/beach.component';
+import { TripsComponent } from './dashboard/pages/uploads/trips/trips.component';
+import { ShowRentsComponent } from './packages/show-rents/show-rents.component';
+import { ShowTripsComponent } from './packages/show-trips/show-trips.component';
+import { ShowTransportsComponent } from './packages/show-transports/show-transports.component';
+import { ShowSportsComponent } from './packages/show-sports/show-sports.component';
+import { ShowSpiciesComponent } from './packages/show-spicies/show-spicies.component';
+import { ShowShoppComponent } from './packages/show-shopp/show-shopp.component';
+import { ShowRestaurantComponent } from './packages/show-restaurant/show-restaurant.component';
+import { ShowHotelComponent } from './packages/show-hotel/show-hotel.component';
+import { ShowHistoricalComponent } from './packages/show-historical/show-historical.component';
+import { ShowForestsComponent } from './packages/show-forests/show-forests.component';
+import { ShowBeachesComponent } from './packages/show-beaches/show-beaches.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -62,7 +76,6 @@ import { ForestComponent } from './dashboard/pages/uploads/forest/forest.compone
     ZanbnbComponent,
     HelpsComponent,
     DashComponent,
-    TripComponent,
     HomeComponent,
     AccountComponent,
     MessageComponent,
@@ -78,6 +91,19 @@ import { ForestComponent } from './dashboard/pages/uploads/forest/forest.compone
     SportComponent,
     TransportComponent,
     ForestComponent,
+    BeachComponent,
+    TripsComponent,
+    ShowRentsComponent,
+    ShowTripsComponent,
+    ShowTransportsComponent,
+    ShowSportsComponent,
+    ShowSpiciesComponent,
+    ShowShoppComponent,
+    ShowRestaurantComponent,
+    ShowHotelComponent,
+    ShowHistoricalComponent,
+    ShowForestsComponent,
+    ShowBeachesComponent,
 
    
   ],
@@ -100,6 +126,9 @@ import { ForestComponent } from './dashboard/pages/uploads/forest/forest.compone
     MatSelectModule,
     MatOptionModule,
     MatTabsModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
   ],
   providers: [
     provideClientHydration()
