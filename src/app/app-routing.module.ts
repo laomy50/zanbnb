@@ -11,7 +11,6 @@ import { DashComponent } from './dashboard/pages/dash/dash.component';
 import { HomeComponent } from './dashboard/pages/home/home.component';
 import { MessageComponent } from './dashboard/pages/message/message.component';
 import { NotificationComponent } from './dashboard/pages/notification/notification.component';
-import { TripComponent } from './dashboard/pages/trip/trip.component';
 import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.component';
 import { UploadComponent } from './dashboard/pages/upload/upload.component';
 
@@ -36,7 +35,6 @@ children:[
   {path:'home',component:HomeComponent},
   {path:'message',component:MessageComponent},
   {path:'notification',component:NotificationComponent},
-  {path:'trip',component:TripComponent},
   {path:'watchlist',component:WatchlistComponent},
   {path:'upload',component:UploadComponent}
 ]},

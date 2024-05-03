@@ -21,4 +21,7 @@ export class RentPackageService {
      return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllRentPackages`);
   }
 
+
+  
+
 }

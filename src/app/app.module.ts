@@ -60,6 +60,9 @@ import { ShowBeachesComponent } from './packages/show-beaches/show-beaches.compo
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -128,7 +131,10 @@ import { MatTableModule } from '@angular/material/table';
     MatTabsModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration()
