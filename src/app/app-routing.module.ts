@@ -13,6 +13,7 @@ import { MessageComponent } from './dashboard/pages/message/message.component';
 import { NotificationComponent } from './dashboard/pages/notification/notification.component';
 import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.component';
 import { UploadComponent } from './dashboard/pages/upload/upload.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -45,6 +46,7 @@ children:[
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,  { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
