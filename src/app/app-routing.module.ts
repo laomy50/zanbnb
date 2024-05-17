@@ -44,7 +44,7 @@ children:[
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  { useHash: true, bindToComponentInputs: true, initialNavigation: 'enabledBlocking' })],
+  imports: [RouterModule.forRoot(routes,  { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
