@@ -74,6 +74,7 @@ import { SpiceListComponent } from './dashboard/pages/watchlist/spice-list/spice
 import { SportListComponent } from './dashboard/pages/watchlist/sport-list/sport-list.component';
 import { TransportListComponent } from './dashboard/pages/watchlist/transport-list/transport-list.component';
 import { TripsListComponent } from './dashboard/pages/watchlist/trips-list/trips-list.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 
@@ -159,7 +160,8 @@ import { TripsListComponent } from './dashboard/pages/watchlist/trips-list/trips
     MatDialogModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
