@@ -1,104 +1,122 @@
-<div class="container mt-5">
-    <mat-form-field style="width: 30%">
-      <mat-label>Search</mat-label>
-      <input
-        matInput
-        (keyup)="applyFilterPayment($event)"
-        placeholder="Ex. Sleiman"
-        #input
-      />
-      <span matTextPrefix class="custom-icon">
-        <mat-icon>search</mat-icon>
-      </span>
-    </mat-form-field>
- 
-   <div class="print-containerByPayment">
-    <table
-    class="table table-hover"
-      mat-table
-      [dataSource]="dataSource2"
-      matSort
-      style="border-radius: 24px"
-    >
-      <!-- index -->
-      <ng-container matColumnDef="index">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
-        <td mat-cell *matCellDef="let element; let i = index">
-          {{ i + 1 }}
-        </td>
-      </ng-container>
+  
+<h1 style="text-align: center; padding: 1em 0">Packages</h1>
+<div class="mat-elevation-z8" style="border-radius: 24px;">
+  <mat-tab-group fitInkBarToContent>
+    <!-- Rent -->
+    <mat-tab label="Rent">
+      <ng-template mat-tab-label>
+        <mat-icon>house</mat-icon>&nbsp;
+        <span>Rent Package</span>
+      </ng-template>
+      <br>
+      <app-rents-list/>
+    </mat-tab>
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="rentName">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          sortActionDescription="Sort by name"
-        >
-          Name
-        </th>
-        <td mat-cell *matCellDef="let element">
-        {{element.rentName}}
-        </td>
-      </ng-container>
+    <!--Shopping -->
+    <mat-tab label="Shopping">
+      <ng-template mat-tab-label>
+        <mat-icon>add_shopping_cart</mat-icon>&nbsp;
+        <span>Shopping Package</span>
+      </ng-template>
+      <br/>
+        <app-shopp-list/>
+    </mat-tab>
 
-      <!-- uNIT Column -->
-      <ng-container matColumnDef="rentPrice">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          sortActionDescription="Sort by price"
-        >
-          Price
-        </th>
-        <td mat-cell *matCellDef="let element">
-        {{element.rentPrice}}
-        </td>
-      </ng-container>
+    <!-- Spicies -->
+    <mat-tab label="Spicies">
+      <ng-template mat-tab-label>
+        <mat-icon>spa</mat-icon>&nbsp;
+        <span>Spicies Package</span>
+      </ng-template>
+      <br/>
+     <app-spice-list/>
+    </mat-tab>
 
-      <ng-container matColumnDef="rentLocation">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          sortActionDescription="Sort by location"
-        >
-          Location
-        </th>
-        <td mat-cell *matCellDef="let element">
-          {{element.rentLocation}}
-        </td>
-      </ng-container>
+    <!-- Restaurant -->
+    <mat-tab label="Restaurants">
+      <ng-template mat-tab-label>
+        <mat-icon>restaurant</mat-icon>&nbsp;
+        <span>Restaurants Package</span>
+      </ng-template>
+      <br/>
+      <app-restaurant-list/>
+    </mat-tab>
 
-      <ng-container matColumnDef="rentImages">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          sortActionDescription="Sort by image"
-        >
-          Image
-        </th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="primary" (click)="showImages(element)">
-            <mat-icon>images</mat-icon>
-          </button>
-        </td>
-      </ng-container>
-      <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns2"></tr>
-    </table>
-    </div>
-    <mat-paginator
-    #paginator2
-    [pageSizeOptions]="[5, 10, 25, 100, 500]"
-    showFirstLastButtons
-    aria-label="Select page of periodic elements"
-    style="border-radius: 0 0 24px 24px"
-  >
-  </mat-paginator>
-    <br>
+    <!-- Hotel -->
+    <mat-tab label="Hotels">
+      <ng-template mat-tab-label>
+        <mat-icon>Hotel</mat-icon>&nbsp;
+        <span>Hotels Package</span>
+      </ng-template>
+        <br>
+       <app-hotel-list/>
+    </mat-tab>
+
+    <!-- History -->
+    <mat-tab label="Historical Site">
+      <ng-template mat-tab-label>
+        <mat-icon>history</mat-icon>&nbsp;
+        <span>Historical Site Package</span>
+      </ng-template>
+     <br/>
+      <app-historical-list/>
+    </mat-tab>
+
+    <!-- Sports -->
+    <mat-tab label="Sports">
+      <ng-template mat-tab-label>
+        <mat-icon>sports</mat-icon>&nbsp;
+        <span>Sports Package</span>
+      </ng-template>
+      <br>
+      <app-sport-list/>
+    </mat-tab>
+
+    <!-- transport -->
+    <mat-tab label="Transports">
+      <ng-template mat-tab-label>
+        <mat-icon>motorcycle</mat-icon>&nbsp;
+        <span>Transports Package</span>
+      </ng-template>
+      <br>
+      <app-transport-list/>
+    </mat-tab>
+
+    <!-- Forest -->
+    <mat-tab label="Forest">
+      <ng-template mat-tab-label>
+        <mat-icon>forest</mat-icon>&nbsp;
+        <span>Forest Package</span>
+      </ng-template>
+      <br>
+     <app-forest-list/>
+    </mat-tab>
+
+    <!-- Beach -->
+    <mat-tab label="Beach">
+      <ng-template mat-tab-label>
+        <mat-icon>water</mat-icon>&nbsp;
+        <span>Beach Package</span>
+      </ng-template>
+      <br>
+      <app-beach-list/>
+    </mat-tab>
+
+    <!-- Trips -->
+    <mat-tab label="Trips">
+      <ng-template mat-tab-label>
+        <mat-icon>flight_land</mat-icon>&nbsp;
+        <span>Trips Package</span>
+      </ng-template>
+      <br>
+    <app-trips-list/>
+    </mat-tab>
+  </mat-tab-group>
+  <br>
 </div>
+
+
+
+
+
  

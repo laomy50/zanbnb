@@ -63,6 +63,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ShoppListComponent } from './dashboard/pages/watchlist/shopp-list/shopp-list.component';
+import { BeachListComponent } from './dashboard/pages/watchlist/beach-list/beach-list.component';
+import { ForestListComponent } from './dashboard/pages/watchlist/forest-list/forest-list.component';
+import { HistoricalListComponent } from './dashboard/pages/watchlist/historical-list/historical-list.component';
+import { HotelListComponent } from './dashboard/pages/watchlist/hotel-list/hotel-list.component';
+import { RentsListComponent } from './dashboard/pages/watchlist/rents-list/rents-list.component';
+import { RestaurantListComponent } from './dashboard/pages/watchlist/restaurant-list/restaurant-list.component';
+import { SpiceListComponent } from './dashboard/pages/watchlist/spice-list/spice-list.component';
+import { SportListComponent } from './dashboard/pages/watchlist/sport-list/sport-list.component';
+import { TransportListComponent } from './dashboard/pages/watchlist/transport-list/transport-list.component';
+import { TripsListComponent } from './dashboard/pages/watchlist/trips-list/trips-list.component';
 
 
 
@@ -107,6 +118,17 @@ import {MatDialogModule} from '@angular/material/dialog';
     ShowHistoricalComponent,
     ShowForestsComponent,
     ShowBeachesComponent,
+    ShoppListComponent,
+    BeachListComponent,
+    ForestListComponent,
+    HistoricalListComponent,
+    HotelListComponent,
+    RentsListComponent,
+    RestaurantListComponent,
+    SpiceListComponent,
+    SportListComponent,
+    TransportListComponent,
+    TripsListComponent,
 
    
   ],

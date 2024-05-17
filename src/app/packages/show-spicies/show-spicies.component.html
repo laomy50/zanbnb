@@ -1,1 +1,12 @@
-<p>show-spicies works!</p>
+<div class="mt-5">
+    <div class="row">
+      <mat-grid-list cols="4" rowHeight="1:1">
+          <mat-grid-tile *ngFor="let fileHandle of data.images">
+              <div style="position: relative;">
+                <span class="btn-remove-image" >x</span>
+                  <img [src]="fileHandle.url" width="100px" height="100px">
+              </div>
+          </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
