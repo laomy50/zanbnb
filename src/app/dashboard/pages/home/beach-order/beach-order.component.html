@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let beach of beaches let beachIndex = index">
+        <div class="card mb-4">
+          <div [attr.id]="'carouselExampleControls' + beachIndex" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div *ngFor="let image of beach.beachImages; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
+                <img [src]="image.url" alt="beach pictures" class="d-block w-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleControls' + beachIndex" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleControls' + beachIndex" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <p>{{ beach.beachName }}</p>
+            <p>{{ beach.beachLocation }}</p>
+            <p>{{ beach.beachPrice | currency }}</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -75,6 +75,19 @@ import { SportListComponent } from './dashboard/pages/watchlist/sport-list/sport
 import { TransportListComponent } from './dashboard/pages/watchlist/transport-list/transport-list.component';
 import { TripsListComponent } from './dashboard/pages/watchlist/trips-list/trips-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { RentOrderComponent } from './dashboard/pages/home/rent-order/rent-order.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BeachOrderComponent } from './dashboard/pages/home/beach-order/beach-order.component';
+import { ForestOrderComponent } from './dashboard/pages/home/forest-order/forest-order.component';
+import { HistoricalOrderComponent } from './dashboard/pages/home/historical-order/historical-order.component';
+import { HotelOrderComponent } from './dashboard/pages/home/hotel-order/hotel-order.component';
+import { RestaurantOrderComponent } from './dashboard/pages/home/restaurant-order/restaurant-order.component';
+import { ShoppOrderComponent } from './dashboard/pages/home/shopp-order/shopp-order.component';
+import { SpiciesOrderComponent } from './dashboard/pages/home/spicies-order/spicies-order.component';
+import { SportOrderComponent } from './dashboard/pages/home/sport-order/sport-order.component';
+import { TransportOrderComponent } from './dashboard/pages/home/transport-order/transport-order.component';
+import { TripOrderComponent } from './dashboard/pages/home/trip-order/trip-order.component';
 
 
 
@@ -130,6 +143,17 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     SportListComponent,
     TransportListComponent,
     TripsListComponent,
+    RentOrderComponent,
+    BeachOrderComponent,
+    ForestOrderComponent,
+    HistoricalOrderComponent,
+    HotelOrderComponent,
+    RestaurantOrderComponent,
+    ShoppOrderComponent,
+    SpiciesOrderComponent,
+    SportOrderComponent,
+    TransportOrderComponent,
+    TripOrderComponent,
 
    
   ],
@@ -157,7 +181,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatTableModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    CarouselModule.forRoot(),
+    NgbModule
   ],
   providers: [
     provideClientHydration(),
