@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SpiciesService } from '../../../../services/spicies.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-spicies-order',
@@ -9,9 +11,11 @@ import { ImageProcessingService } from '../../../../services/image-processing.se
 })
 export class SpiciesOrderComponent  implements OnInit {
   spicies: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private spiciesService: SpiciesService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,4 +30,6 @@ export class SpiciesOrderComponent  implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }

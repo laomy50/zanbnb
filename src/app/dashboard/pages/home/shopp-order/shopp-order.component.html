@@ -28,3 +28,72 @@
     </div>
   </div>
   
+    <!-- form -->
+    <ng-template #add let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">Set Your Book Now</h2>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="d('Cross click')"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="propertyForm" >
+         <div class="row">
+          <!-- name -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label> Name</mat-label>
+            <input matInput type="text"  required placeholder="Name" >
+          </mat-form-field>
+          <!-- email -->
+         <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label> Email</mat-label>
+            <input matInput type="email"  required placeholder="Email" >
+          </mat-form-field>
+          <!-- address -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label> Address</mat-label>
+            <input matInput type="text"  required placeholder="Address" >
+          </mat-form-field>
+          <!-- phone -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Telephone</mat-label>
+            <span matTextPrefix>+1 &nbsp;</span>
+            <input type="tel" matInput placeholder="555-555-1234">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+          <!-- from -->
+          <mat-form-field  appearance="fill" class="col-lg-6">
+            <mat-label>From</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <!-- adults -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label> Amount</mat-label>
+            <input matInput type="number"  required placeholder="Amount" >
+          </mat-form-field>
+         </div>
+         <hr>
+         <div class="row">
+           <div class="col-sm-6">
+             <button mat-raised-button color="primary" (click)="bookNow()" class="m-2">
+               Add
+             </button>
+    
+             <button
+               mat-raised-button
+               color="accent"
+               (click)="d('Cross click')"
+             >
+               Close
+             </button>
+           </div>
+         </div>
+        </form>
+      </div>
+    </ng-template>

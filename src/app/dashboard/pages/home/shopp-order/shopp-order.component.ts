@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppPackageService } from '../../../../services/shopp-package.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-shopp-order',
@@ -9,9 +11,11 @@ import { ImageProcessingService } from '../../../../services/image-processing.se
 })
 export class ShoppOrderComponent implements OnInit {
   shopps: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private shoppPackageService: ShoppPackageService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,4 +30,6 @@ export class ShoppOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TripPackage } from '../../../../model/trip-package';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
 import { TripService } from '../../../../services/trip.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-trip-order',
@@ -10,9 +12,11 @@ import { TripService } from '../../../../services/trip.service';
 })
 export class TripOrderComponent implements OnInit {
   trips: any[] = [];
+propertyForm!:FormGroup;
   
 
   constructor(private tripService: TripService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -27,5 +31,7 @@ export class TripOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }
 

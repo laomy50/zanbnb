@@ -33,7 +33,7 @@ import { UploadComponent } from './dashboard/pages/upload/upload.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
-import { MatOptionModule } from '@angular/material/core';
+import { MatOptionModule, provideNativeDateAdapter } from '@angular/material/core';
 import { DragDirective } from './drag.directive';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ShoppComponent } from './dashboard/pages/uploads/shopp/shopp.component';
@@ -88,7 +88,7 @@ import { SpiciesOrderComponent } from './dashboard/pages/home/spicies-order/spic
 import { SportOrderComponent } from './dashboard/pages/home/sport-order/sport-order.component';
 import { TransportOrderComponent } from './dashboard/pages/home/transport-order/transport-order.component';
 import { TripOrderComponent } from './dashboard/pages/home/trip-order/trip-order.component';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -180,14 +180,17 @@ import { TripOrderComponent } from './dashboard/pages/home/trip-order/trip-order
     MatSortModule,
     MatTableModule,
     MatFormFieldModule,
+    MatDatepickerModule,
     ReactiveFormsModule,
     MatDialogModule,
     CarouselModule.forRoot(),
     NgbModule
+    
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideNativeDateAdapter()
   ],
   bootstrap: [AppComponent]
 })

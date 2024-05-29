@@ -54,3 +54,6 @@
     background-color: #0056b3;
   }
   
+  ::ng-deep .cdk-overlay-container {
+    z-index: 9999;
+  }

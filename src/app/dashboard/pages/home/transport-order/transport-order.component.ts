@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
 import { TransportService } from '../../../../services/transport.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-transport-order',
@@ -9,9 +11,11 @@ import { TransportService } from '../../../../services/transport.service';
 })
 export class TransportOrderComponent implements OnInit {
   transports: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private transportService: TransportService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,5 +30,7 @@ export class TransportOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }
 

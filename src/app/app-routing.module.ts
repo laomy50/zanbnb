@@ -35,7 +35,7 @@ children:[
   {path:'dash',component:DashComponent},
   {path:'home',component:HomeComponent},
   {path:'message',component:MessageComponent},
-  {path:'notification',component:NotificationComponent},
+  {path:'orders',component:NotificationComponent},
   {path:'watchlist',component:WatchlistComponent},
   {path:'upload',component:UploadComponent}
 ]},

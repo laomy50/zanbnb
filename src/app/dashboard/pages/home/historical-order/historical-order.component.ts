@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HistoricalService } from '../../../../services/historical.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-historical-order',
@@ -9,9 +11,11 @@ import { ImageProcessingService } from '../../../../services/image-processing.se
 })
 export class HistoricalOrderComponent implements OnInit {
   historicals: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private historicalService: HistoricalService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,4 +30,6 @@ export class HistoricalOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from '../../../../services/hotel.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-hotel-order',
@@ -9,9 +11,11 @@ import { ImageProcessingService } from '../../../../services/image-processing.se
 })
 export class HotelOrderComponent implements OnInit {
   hotels: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private hotelService: HotelService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,4 +30,6 @@ export class HotelOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }

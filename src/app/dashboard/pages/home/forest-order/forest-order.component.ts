@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ForestService } from '../../../../services/forest.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-forest-order',
@@ -9,9 +11,11 @@ import { ImageProcessingService } from '../../../../services/image-processing.se
 })
 export class ForestOrderComponent implements OnInit {
   forests: any[] = [];
+propertyForm!: FormGroup<any>;
   
 
   constructor(private forestService: ForestService,
+    private modalService: NgbModal,
     private imageProcessingService:ImageProcessingService,
   ) { }
 
@@ -26,4 +30,6 @@ export class ForestOrderComponent implements OnInit {
       }
     );
   }
+
+  bookNow(){}
 }
