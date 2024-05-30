@@ -5,7 +5,7 @@
           <div [attr.id]="'carouselExampleControls' + transportIndex" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div *ngFor="let image of transport.transportImages; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
-                <img [src]="image.url" alt="sports pictures" class="d-block w-100">
+                <img [src]="image.url" alt="sports pictures" class="d-block w-100 carousel-image">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleControls' + transportIndex" data-bs-slide="prev">
@@ -67,18 +67,18 @@
         <!-- from -->
         <mat-form-field  appearance="fill" class="col-lg-6">
           <mat-label>From</mat-label>
-          <input matInput [matDatepicker]="picker">
+          <input matInput [matDatepicker]="picker1">
           <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
+          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
         <!-- to -->
         <mat-form-field  appearance="fill" class="col-lg-6">
           <mat-label>To</mat-label>
-          <input matInput [matDatepicker]="picker">
+          <input matInput [matDatepicker]="picker2">
           <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
         <!-- adults -->
         <mat-form-field appearance="fill" class="col-lg-6">

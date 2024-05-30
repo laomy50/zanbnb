@@ -5,7 +5,7 @@
         <div id="carousel{{rent.id}}" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div *ngFor="let image of rent.rentImages; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
-              <img [src]="image.url" alt="rents pictures" class="d-block w-100">
+              <img [src]="image.url" alt="rents pictures" class="d-block w-100 carousel-image">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

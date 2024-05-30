@@ -5,7 +5,7 @@
           <div [attr.id]="'carouselExampleControls' + shoppIndex" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div *ngFor="let image of shopp.shoppingImages; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
-                <img [src]="image.url" alt="rents pictures" class="d-block w-100">
+                <img [src]="image.url" alt="rents pictures" class="d-block w-100 carousel-image">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleControls' + shoppIndex" data-bs-slide="prev">
@@ -67,16 +67,17 @@
           <!-- from -->
           <mat-form-field  appearance="fill" class="col-lg-6">
             <mat-label>From</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput [matDatepicker]="picker1">
             <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
           </mat-form-field>
-          <!-- adults -->
+          <!-- amount -->
           <mat-form-field appearance="fill" class="col-lg-6">
             <mat-label> Amount</mat-label>
-            <input matInput type="number"  required placeholder="Amount" >
+            <input matInput type="number"  required placeholder="Adult(s)" >
           </mat-form-field>
+
          </div>
          <hr>
          <div class="row">
