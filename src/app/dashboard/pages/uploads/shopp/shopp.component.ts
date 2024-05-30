@@ -23,7 +23,7 @@ export class ShoppComponent {
   constructor(private shoppPackageService:ShoppPackageService,
     private domSanitizer: DomSanitizer) { }
 
-    addShopp(shoppForm:NgForm){
+    addShopping(shoppForm:NgForm){
       const shoppPackageFormData = this.preparedFormData(this.shoppingPackage)
       this.shoppPackageService.addShoppingPackage(shoppPackageFormData).subscribe(
         (response:ShoppingPackage)=>{

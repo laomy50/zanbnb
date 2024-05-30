@@ -1,73 +1,56 @@
-
 <div class="container mt-5">
-    <div class="card  p-2" >
+  <div class="card p-2">
       <div class="row">
-        <div class="col-6">
-          <form #restaurantForm="ngForm" (ngSubmit)="addShopp(restaurantForm)">
-          <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Restaurant Name"
-            type="text"
-            [(ngModel)]="restaurantPackage.restaurantName" name="restaurantName">
-          </mat-form-field>
+          <div class="col-md-6 mb-3 mb-md-0">
+              <form #restaurantForm="ngForm" (ngSubmit)="addRestaurant(restaurantForm)">
+                  <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Name</mat-label>
+                      <input matInput placeholder="Restaurant Name" type="text" [(ngModel)]="restaurantPackage.restaurantName" name="restaurantName">
+                  </mat-form-field>
 
-          <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Location</mat-label>
-            <input matInput placeholder="Restaurant Location"
-            type="text"
-            [(ngModel)]="restaurantPackage.restaurantLocation" name="restaurantLocation">
-          </mat-form-field>
+                  <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Location</mat-label>
+                      <input matInput placeholder="Restaurant Location" type="text" [(ngModel)]="restaurantPackage.restaurantLocation" name="restaurantLocation">
+                  </mat-form-field>
 
-          <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Price</mat-label>
-            <input matInput placeholder="Restaurant Price"
-            type="number"
-            [(ngModel)]="restaurantPackage.restaurantPrice" name="restaurantPrice">
-          </mat-form-field>
+                  <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Price</mat-label>
+                      <input matInput placeholder="Restaurant Price" type="number" [(ngModel)]="restaurantPackage.restaurantPrice" name="restaurantPrice">
+                  </mat-form-field>
 
-          <div align ="end">
-            <button mat-stroked-button color="primary"  style="margin-right: 8px;">Clear</button>  
-            <button  mat-stroked-button color="primary" type="submit">Add Restaurant</button>
+                  <div class="d-flex justify-content-end">
+                      <button mat-stroked-button color="primary" style="margin-right: 8px;">Clear</button>
+                      <button mat-stroked-button color="primary" type="submit">Add Restaurant</button>
+                  </div>
+              </form>
           </div>
-        </form>
-        </div>
 
-        <div class="col-6">
-          <div>
-
-            <div class="dropzone"
-            appDrag
-            (files)="fileDropped($event)"
-            >
-              <div class="text-wrapper">
-                <div class="centered">
-                  Drag and drop your file or 
-                  <a (click)="selectFile.click()" class="browse-button">browse</a>
-                   a file
-                </div>              
-              </div>
-            </div>
-
-            <input type="file" multiple value="select" #selectFile
-            style="display: none;"
-            (change)="onFileSelected($event)">
-          </div>
-          
-          <div class="mt-5">
-            <div class="row">
-              <mat-grid-list cols="4" rowHeight="1:1">
-                  <mat-grid-tile *ngFor="let file of restaurantPackage.restaurantImages; let i = index">
-                      <div style="position: relative;">
-                        <span class="btn-remove-image" (click)="removeImages(i)">x</span>
-                          <img [src]="file.url"  width="100px" height="100px">
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <div class="dropzone" appDrag (files)="fileDropped($event)">
+                      <div class="text-wrapper">
+                          <div class="centered">
+                              Drag and drop your file or 
+                              <a (click)="selectFile.click()" class="browse-button">browse</a>
+                              a file
+                          </div>              
                       </div>
-                  </mat-grid-tile>
-              </mat-grid-list>
-            </div>
+                  </div>
+
+                  <input type="file" multiple value="select" #selectFile style="display: none;" (change)="onFileSelected($event)">
+              </div>
+              
+              <div class="row">
+                  <mat-grid-list cols="4" rowHeight="1:1">
+                      <mat-grid-tile *ngFor="let file of restaurantPackage.restaurantImages; let i = index">
+                          <div style="position: relative;">
+                              <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                              <img [src]="file.url" width="100px" height="100px">
+                          </div>
+                      </mat-grid-tile>
+                  </mat-grid-list>
+              </div>
           </div>
-        </div>
-
       </div>
-
-    </div>
- </div> 
+  </div>
+</div>

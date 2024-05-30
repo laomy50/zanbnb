@@ -24,7 +24,7 @@ export class RestaurantComponent {
   constructor(private restaurantService:RestaurantService,
     private domSanitizer: DomSanitizer) { }
 
-    addShopp(restaurantForm:NgForm){
+    addRestaurant(restaurantForm:NgForm){
       const restaurantPackageFormData = this.preparedFormData(this.restaurantPackage)
       this.restaurantService.addNewRestaurantPackage(restaurantPackageFormData).subscribe(
         (response:RestaurantPackage)=>{

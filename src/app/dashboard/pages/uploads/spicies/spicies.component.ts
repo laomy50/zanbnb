@@ -23,7 +23,7 @@ export class SpiciesComponent {
   constructor(private spiciesService:SpiciesService,
     private domSanitizer: DomSanitizer) { }
 
-    addShopp(spiciesForm:NgForm){
+    addSpicies(spiciesForm:NgForm){
       const spiciesPackageFormData = this.preparedFormData(this.spiciesPackage)
       this.spiciesService.addNewSpiciesPackage(spiciesPackageFormData).subscribe(
         (response:SpiciesPackage)=>{

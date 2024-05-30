@@ -10,11 +10,12 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class NotificationComponent {
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'phone', 'email','status','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+payment: any;
 
   constructor(){}
 
@@ -26,5 +27,7 @@ export class NotificationComponent {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  open(payment: any){}
 
 }

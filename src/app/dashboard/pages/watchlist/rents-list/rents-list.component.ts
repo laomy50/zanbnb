@@ -60,27 +60,9 @@ export class RentsListComponent {
 
   applyFilterPayment(event: Event) {
     const filterValue = (event.target as HTMLInputElement)?.value?.trim().toLowerCase();
-    
-    // if (filterValue !== undefined) {
-    //   this.dataSource2.filter = filterValue;
-    //   this.dataSource2.filterPredicate = (data: any, filter: string) => {
-    //     const name = (data.customer?.individualInfo?.individualFullName ||
-    //       data.customer?.businessInfo?.businessName || '').toLowerCase();
-    //     const unit = (data.commercial?.identification ||
-    //       data.residential?.identification ||
-    //       data.openSpace?.identification || '').toLowerCase();
-    //     const status = (data.status || '').toLowerCase();
-    //     const invoices = (data.numUnpaidInvoices !== null ? data.numUnpaidInvoices.toString() : '').toLowerCase();
-    //     const code = (data.customer?.customerCode || '').toLowerCase();
-    //     const phone = ((data.customer?.individualInfo?.individualPhoneNumber1 ? data.customer?.individualInfo?.individualPhoneNumber1
-    //                     + (data.customer?.individualInfo?.individualPhoneNumber2 ? ' / ' + data.customer?.individualInfo?.individualPhoneNumber2 : '') :
-    //                     (data.customer?.businessInfo?.businessPhone ? data.customer?.businessInfo?.businessPhone : '')) || '').toLowerCase();
-  
-    //     return name.includes(filter) || unit.includes(filter) || status.includes(filter) || 
-    //            invoices.includes(filter) || code.includes(filter) || phone.includes(filter);
-    //   };
-    // }
+    this.dataSource2.filter = filterValue;
   }
+  
 
   showImages(rentPackage:RentPackage){
     console.log(rentPackage);

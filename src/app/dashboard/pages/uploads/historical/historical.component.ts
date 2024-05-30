@@ -24,7 +24,7 @@ export class HistoricalComponent {
   constructor(private historicalService:HistoricalService,
     private domSanitizer: DomSanitizer) { }
 
-    addHotel(historicalForm:NgForm){
+    addHistorical(historicalForm:NgForm){
       const historicalPackageFormData = this.preparedFormData(this.historicalPackage)
       this.historicalService.addNewHistoricalPackage(historicalPackageFormData).subscribe(
         (response:HistoricalPackage)=>{
