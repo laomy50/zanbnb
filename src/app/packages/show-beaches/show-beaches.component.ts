@@ -38,4 +38,20 @@ export class ShowBeachesComponent implements OnInit{
     console.log(this.data);
   }
 
+    // view
+    toggleImageSize(event: Event) {
+      const imgElement = event.target as HTMLImageElement;
+      if (imgElement.classList.contains('enlarged')) {
+        imgElement.classList.remove('enlarged');
+      } else {
+        this.resetEnlargedImages();
+        imgElement.classList.add('enlarged');
+      }
+    }
+  
+    private resetEnlargedImages() {
+      const enlargedImages = document.querySelectorAll('.enlarged');
+      enlargedImages.forEach(img => img.classList.remove('enlarged'));
+    }
+
 }

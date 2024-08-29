@@ -5,7 +5,7 @@
           <div [attr.id]="'carouselExampleControls' + beachIndex" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div *ngFor="let image of beach.beachImages; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
-                <img [src]="image.url" alt="beach pictures" class="d-block w-100 carousel-image">
+                <img [src]="image.url" alt="beach pictures" class="d-block w-100 carousel-image" (click)="toggleImageSize($event)">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleControls' + beachIndex" data-bs-slide="prev">
@@ -40,73 +40,102 @@
       ></button>
     </div>
     <div class="modal-body">
-      <form [formGroup]="propertyForm" >
-       <div class="row">
-        <!-- name -->
-        <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label> Name</mat-label>
-          <input matInput type="text"  required placeholder="Name" >
-        </mat-form-field>
-        <!-- email -->
-       <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label> Email</mat-label>
-          <input matInput type="email"  required placeholder="Email" >
-        </mat-form-field>
-        <!-- address -->
-        <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label> Address</mat-label>
-          <input matInput type="text"  required placeholder="Address" >
-        </mat-form-field>
-        <!-- phone -->
-        <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label>Telephone</mat-label>
-          <span matTextPrefix>+1 &nbsp;</span>
-          <input type="tel" matInput placeholder="555-555-1234">
-          <mat-icon matSuffix>mode_edit</mat-icon>
-        </mat-form-field>
-        <!-- from -->
-        <mat-form-field  appearance="fill" class="col-lg-6">
-          <mat-label>From</mat-label>
-          <input matInput [matDatepicker]="picker1">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
-          <mat-datepicker #picker1></mat-datepicker>
-        </mat-form-field>
-        <!-- to -->
-        <mat-form-field  appearance="fill" class="col-lg-6">
-          <mat-label>To</mat-label>
-          <input matInput [matDatepicker]="picker2">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-          <mat-datepicker #picker2></mat-datepicker>
-        </mat-form-field>
-        <!-- adults -->
-        <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label> Adult(s)</mat-label>
-          <input matInput type="number"  required placeholder="Adult(s)" >
-        </mat-form-field>
-        <!-- childrens -->
-        <mat-form-field appearance="fill" class="col-lg-6">
-          <mat-label> Children(s)</mat-label>
-          <input matInput type="number"  required placeholder="Children(s)" >
-        </mat-form-field>
-       </div>
-       <hr>
-       <div class="row">
-         <div class="col-sm-6">
-           <button mat-raised-button color="primary" (click)="bookNow()" class="m-2">
-             Add
-           </button>
-  
-           <button
-             mat-raised-button
-             color="accent"
-             (click)="d('Cross click')"
-           >
-             Close
-           </button>
-         </div>
-       </div>
+      <form [formGroup]="propertyForm" (ngSubmit)="bookNow()">
+        <div class="row">
+          <!-- Name -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="name">
+            <mat-error *ngIf="propertyForm.get('name')?.hasError('required')">
+              Name is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- Email -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Email" formControlName="email">
+            <mat-error *ngIf="propertyForm.get('email')?.hasError('required')">
+              Email is required.
+            </mat-error>
+            <mat-error *ngIf="propertyForm.get('email')?.hasError('email')">
+              Enter a valid email address.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- Address -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Address</mat-label>
+            <input matInput type="text" placeholder="Address" formControlName="address">
+            <mat-error *ngIf="propertyForm.get('address')?.hasError('required')">
+              Address is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- Phone -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Telephone</mat-label>
+            <input type="tel" matInput placeholder="555-555-1234" formControlName="phone">
+            <mat-error *ngIf="propertyForm.get('phone')?.hasError('required')">
+              Phone number is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- From Date -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>From</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="dateFrom">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            <mat-error *ngIf="propertyForm.get('dateFrom')?.hasError('required')">
+              Date From is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- To Date -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>To</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="dateTo">
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+            <mat-error *ngIf="propertyForm.get('dateTo')?.hasError('required')">
+              Date To is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- Adults -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Adult(s)</mat-label>
+            <input matInput type="number" placeholder="Adult(s)" formControlName="numberOfAdults">
+            <mat-error *ngIf="propertyForm.get('numberOfAdults')?.hasError('required')">
+              Number of Adults is required.
+            </mat-error>
+          </mat-form-field>
+      
+          <!-- Children -->
+          <mat-form-field appearance="fill" class="col-lg-6">
+            <mat-label>Children(s)</mat-label>
+            <input matInput type="number" placeholder="Children(s)" formControlName="numberOfChildren">
+            <mat-error *ngIf="propertyForm.get('numberOfChildren')?.hasError('required')">
+              Number of Children is required.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      
+        <hr>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <button mat-raised-button color="primary" class="m-2" type="submit">
+              Add
+            </button>
+      
+            <button mat-raised-button color="accent" (click)="d('Cross click')">
+              Close
+            </button>
+          </div>
+        </div>
       </form>
+      
     </div>
   </ng-template>

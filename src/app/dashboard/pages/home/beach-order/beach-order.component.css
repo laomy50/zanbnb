@@ -63,3 +63,12 @@
     height: 200px; 
     object-fit: cover; 
   }
+
+  .carousel-inner img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .carousel-inner img.enlarged {
+    transform: scale(2); /* Adjust the scale value as needed */
+  }

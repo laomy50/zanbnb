@@ -5,7 +5,7 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar style="background-color:#00CED1;">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/memberArea/dash" >
+      <a mat-list-item  routerLink="/memberArea/dash">
         <mat-icon>dashboard</mat-icon>
         Dashboard
       </a>
@@ -13,11 +13,11 @@
         <mat-icon>directions_car</mat-icon>
         Trips
       </a> -->
-      <a mat-list-item routerLink="/memberArea/home">
+      <a mat-list-item  routerLink="/memberArea/home">
         <mat-icon>home</mat-icon>
         Home
       </a>
-      <a mat-list-item routerLink="/memberArea/upload">
+      <a mat-list-item routerLink="/memberArea/upload" *ngIf="hasRole('BUSINESS' || 'ADMIN' || 'STAFF')">
         <mat-icon>perm_media</mat-icon>
         Upload
       </a>
@@ -65,6 +65,13 @@
     <!-- Add Content Here -->
     <div style="padding: 10px;">
       <router-outlet></router-outlet>
+      <!-- dashboard.component.html -->
+      <!-- member-area.component.html -->
+<!-- <div>
+  <h1>Welcome to the Member Area</h1>
+  <p>Your role is: {{ userRole[0]?.name }}</p>
+</div> -->
+
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

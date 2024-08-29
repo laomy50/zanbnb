@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BeachService } from '../../../../services/beach.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BookingService } from '../../../../services/booking.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { BookingService } from '../../../../services/booking.service';
 })
 export class BeachOrderComponent implements OnInit {
   beaches: any[] = [];
-propertyForm!: FormGroup<any>;
+propertyForm!: FormGroup;
   
 
   constructor(private beachService: BeachService,
@@ -23,6 +23,21 @@ propertyForm!: FormGroup<any>;
   ) { }
 
   ngOnInit(): void {
+    this.getAllBeachPackages();
+  // add
+    this.propertyForm = this.formBuilder.group({
+      name: new FormControl('',[Validators.required]) ,
+      email: new FormControl('',[ Validators.required, Validators.email]) ,
+      address: new FormControl('',[ Validators.required]) ,
+      phone: new FormControl('',[ Validators.required]),
+      dateFrom: new FormControl('',[ Validators.required]),
+      dateTo: new FormControl('',[ Validators.required]),
+      numberOfAdults: new FormControl('',[ Validators.required]),
+      numberOfChildren: new FormControl('',[ Validators.required]) 
+    });
+  }
+
+  getAllBeachPackages(){
     this.beachService.getAllBeachPackage()
     .subscribe(
       (data) => {
@@ -33,17 +48,6 @@ propertyForm!: FormGroup<any>;
       }
     );
 
-  // add
-    this.propertyForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      phone: ['', Validators.required],
-      dateFrom: ['', Validators.required],
-      dateTo: ['', Validators.required],
-      numberOfAdults: ['', Validators.required],
-      numberOfChildren: ['', Validators.required]
-    });
   }
 
   onClick(add: any) {
@@ -61,7 +65,23 @@ propertyForm!: FormGroup<any>;
          
         });
     } else {
-      console.log("error");
+      console.log("Form is invalid");
     }
+  }
+
+  // view
+  toggleImageSize(event: Event) {
+    const imgElement = event.target as HTMLImageElement;
+    if (imgElement.classList.contains('enlarged')) {
+      imgElement.classList.remove('enlarged');
+    } else {
+      this.resetEnlargedImages();
+      imgElement.classList.add('enlarged');
+    }
+  }
+
+  private resetEnlargedImages() {
+    const enlargedImages = document.querySelectorAll('.enlarged');
+    enlargedImages.forEach(img => img.classList.remove('enlarged'));
   }
 }
