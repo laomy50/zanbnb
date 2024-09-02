@@ -8,26 +8,31 @@ import { Observable } from 'rxjs';
 })
 export class BookingService {
 
+  // BeachBooking API
   private baseUrl = environment.baseUrl + '/api/bookings';
-  
+  // end
   constructor(private http: HttpClient) { }
 
-  createBooking(bookingData: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl, bookingData);
+  // BeachBooking Methods
+  createBeachBooking(bookingData: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/bookikingBeach`, bookingData);
   }
 
-  getAllBookings(): Observable<any[]> {
+  getAllBeachBookings(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl);
   }
 
-  getBookingById(bookingId: number): Observable<any> {
+  geBeachtBookingById(bookingId: number): Observable<any> {
     const url = `${this.baseUrl}/${bookingId}`;
     return this.http.get<any>(url);
   }
 
-  updateBooking(bookingId: number, updatedBooking: any): Observable<any> {
+  updateBeachBooking(bookingId: number, updatedBooking: any): Observable<any> {
     const url = `${this.baseUrl}/${bookingId}`;
     return this.http.put<any>(url, updatedBooking);
   }
+
+  // END
+  
   
 }

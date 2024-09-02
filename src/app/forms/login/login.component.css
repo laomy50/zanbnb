@@ -1,10 +1,23 @@
 
 .register-box {
     margin: 0 auto;
-    max-width: 400px;
-    padding-top: 50px; 
+    max-width: 700px;
+    padding-top: 190px; 
 }
 
 .custom-width {
     width: 100%; 
+}
+
+.custom-select-panel {
+    z-index: 9999; 
+  }
+  
+.card{
+    max-height: 900px;
+}
+
+form{
+    margin:90px;
+    margin-top: -3px;
 }

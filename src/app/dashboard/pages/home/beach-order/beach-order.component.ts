@@ -33,8 +33,13 @@ propertyForm!: FormGroup;
       dateFrom: new FormControl('',[ Validators.required]),
       dateTo: new FormControl('',[ Validators.required]),
       numberOfAdults: new FormControl('',[ Validators.required]),
-      numberOfChildren: new FormControl('',[ Validators.required]) 
+      numberOfChildren: new FormControl('',[ Validators.required]),
+      beachPackageId: new FormControl('',[Validators.required]),
+      userId: new FormControl('',Validators.required) 
     });
+
+
+
   }
 
   getAllBeachPackages(){
@@ -44,7 +49,7 @@ propertyForm!: FormGroup;
         this.beaches = data.map(beach => this.imageProcessingService.createBeachImages(beach));
       },
       (error) => {
-        console.error('Failed to fetch forests', error);
+        console.error('Failed to fetch beach', error);
       }
     );
 
@@ -56,7 +61,7 @@ propertyForm!: FormGroup;
 
   bookNow(): void {
     if (this.propertyForm.valid) {
-      this.bookingService.createBooking(this.propertyForm.value)
+      this.bookingService.createBeachBooking(this.propertyForm.value)
         .subscribe(response => {
           console.log('Booking created successfully:', response);
           this.propertyForm.reset();

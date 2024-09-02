@@ -21,7 +21,7 @@
             <p>{{ beach.beachName }}</p>
             <p>{{ beach.beachLocation }}</p>
             <p>{{ beach.beachPrice | currency }}</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+            <a (click)="onClick(add)" class="btn btn-primary">Book Now</a>
           </div>
         </div>
       </div>
@@ -120,6 +120,10 @@
               Number of Children is required.
             </mat-error>
           </mat-form-field>
+
+          <!-- Beach Package and User ID fields are hidden since they are set programmatically -->
+        <input type="hidden" formControlName="beachPackageId">
+        <input type="hidden" formControlName="userId">
         </div>
       
         <hr>

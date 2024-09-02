@@ -55,7 +55,7 @@ export class RentOrderComponent implements OnInit {
 
   bookNow(): void {
     if (this.propertyForm.valid) {
-      this.bookingService.createBooking(this.propertyForm.value)
+      this.bookingService.createBeachBooking(this.propertyForm.value)
         .subscribe(response => {
           console.log('Booking created successfully:', response);
           this.propertyForm.reset();
