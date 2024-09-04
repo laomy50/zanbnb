@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { RentPackageService } from '../../../../services/rent-package.service';
 import { ImageProcessingService } from '../../../../services/image-processing.service';
 import { map } from 'rxjs';
 import { RentPackage } from '../../../../model/rent-package';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BookingService } from '../../../../services/booking.service';
 
 
@@ -16,6 +16,7 @@ import { BookingService } from '../../../../services/booking.service';
 export class RentOrderComponent implements OnInit {
   rents: any[] = [];
   propertyForm!: FormGroup;
+  
   
 
   constructor(private rentsService: RentPackageService,
@@ -37,20 +38,29 @@ export class RentOrderComponent implements OnInit {
       }
     );
     // add
+    const userId = sessionStorage.getItem('userId');
     this.propertyForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      phone: ['', Validators.required],
-      dateFrom: ['', Validators.required],
-      dateTo: ['', Validators.required],
-      numberOfAdults: ['', Validators.required],
-      numberOfChildren: ['', Validators.required]
+      name: new FormControl('',[Validators.required]) ,
+      email: new FormControl('',[ Validators.required, Validators.email]) ,
+      address: new FormControl('',[ Validators.required]) ,
+      phone: new FormControl('',[ Validators.required]),
+      dateFrom: new FormControl('',[ Validators.required]),
+      dateTo: new FormControl('',[ Validators.required]),
+      numberOfAdults: new FormControl('',[ Validators.required]),
+      numberOfChildren: new FormControl('',[ Validators.required]),
+      beachPackageId: new FormControl('',[Validators.required]),
+      userId: new FormControl('',Validators.required) 
     });
   }
 
-  onClick(add: any) {
-    this.modalService.open(add, { size: 'lg', centered: true });
+
+  openModal(content: TemplateRef<any>, rentPackageId: number): void {
+    // Patch the form value with the rentPackageId
+    this.propertyForm.patchValue({ rentPackageId: rentPackageId });
+    console.log('Selected Rent Package ID:', rentPackageId);
+
+    // Open the modal
+    this.modalService.open(content, { size: 'lg', centered: true });
   }
 
   bookNow(): void {
