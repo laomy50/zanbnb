@@ -14,6 +14,10 @@ import { NotificationComponent } from './dashboard/pages/notification/notificati
 import { WatchlistComponent } from './dashboard/pages/watchlist/watchlist.component';
 import { UploadComponent } from './dashboard/pages/upload/upload.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MyordersComponent } from './clientcomponent/myorders/myorders.component';
+import { AllpackagesComponent } from './staffcomponent/allpackages/allpackages.component';
+import { UsermanagementComponent } from './staffcomponent/usermanagement/usermanagement.component';
+import { AllordersComponent } from './staffcomponent/allorders/allorders.component';
 
 
 
@@ -37,7 +41,11 @@ children:[
   {path:'message',component:MessageComponent},
   {path:'orders',component:NotificationComponent},
   {path:'watchlist',component:WatchlistComponent},
-  {path:'upload',component:UploadComponent}
+  {path:'upload',component:UploadComponent},
+  {path:'myorders',component:MyordersComponent},
+  {path:'allpackages',component:AllpackagesComponent},
+  {path:'usermanagement',component:UsermanagementComponent},
+  {path:'allorders',component:AllordersComponent},
 ]},
 
 

@@ -89,6 +89,10 @@ import { SportOrderComponent } from './dashboard/pages/home/sport-order/sport-or
 import { TransportOrderComponent } from './dashboard/pages/home/transport-order/transport-order.component';
 import { TripOrderComponent } from './dashboard/pages/home/trip-order/trip-order.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { AllpackagesComponent } from './staffcomponent/allpackages/allpackages.component';
+import { AllordersComponent } from './staffcomponent/allorders/allorders.component';
+import { UsermanagementComponent } from './staffcomponent/usermanagement/usermanagement.component';
+import { MyordersComponent } from './clientcomponent/myorders/myorders.component';
 
 
 @NgModule({
@@ -154,6 +158,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     SportOrderComponent,
     TransportOrderComponent,
     TripOrderComponent,
+    AllpackagesComponent,
+    AllordersComponent,
+    UsermanagementComponent,
+    MyordersComponent,
 
    
   ],
