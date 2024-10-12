@@ -21,7 +21,7 @@
           <p>{{ rent.rentName }}</p>
           <p>{{ rent.rentLocation }}</p>
           <p>{{ rent.rentPrice | currency }}</p>
-          <a (click)="openModal(data, rent.id)" id="data" class="btn btn-primary">Book Now</a>
+          <a (click)="openModal(data, rent.rentPackageId)" id="data" class="btn btn-primary">Book Now</a>
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@
           </mat-form-field>
 
           <!-- Beach Package and User ID fields are hidden since they are set programmatically -->
-        <input type="hidden" formControlName="beachPackageId">
+        <input type="hidden" formControlName="rentPackageId">
         <input type="hidden" formControlName="userId">
         </div>
       
@@ -143,3 +143,41 @@
       
     </div>
   </ng-template>
+
+<!-- Payment Methods Modal -->
+<ng-template #paymentMethodsModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h2 class="modal-title">Select Payment Method</h2>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Pay By Tigo Pesa</p>
+        <p>+255748088569</p>
+        <p>Name: Omar Omar</p>
+        <p>Send a screenshot of the payment confirmation and your username to the above phone number</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Pay By  M-Pesa</p>
+        <p>+255748088569</p>
+        <p>Name: Omar Omar</p>
+        <p>Send a screenshot of the payment confirmation and your username to the above phone number</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Pay By Airtel Money</p>
+        <p>+255748088569</p>
+        <p>Name: Omar Omar</p>
+        <p>Send a screenshot of the payment confirmation and your username to the above phone number</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Pay By Bank Transfer(NMB)</p>
+        <p>23410013182</p>
+        <p>Name: Omar Omar</p>
+        <p>Send a screenshot of the payment confirmation and your username to the above phone number</p>
+      </div>
+      <!-- end -->
+    </div> 
+  
+  </div>
+</ng-template>

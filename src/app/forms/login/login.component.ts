@@ -26,7 +26,7 @@ export class LoginComponent {
         // Convert roles to a string (assuming response.roles is an array of roles)
         const user = JSON.stringify(response);
         sessionStorage.setItem('logged user', user);
-  
+        
         this.router.navigate(['/memberArea']);
       },
       error => {

@@ -5,22 +5,58 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar style="background-color:#00CED1;">Menu</mat-toolbar>
     <mat-nav-list>
+      <!-- Admin Menu -->
       <a mat-list-item  routerLink="/memberArea/dash">
         <mat-icon>dashboard</mat-icon>
         Dashboard
       </a>
+
+      <a mat-list-item  routerLink="/memberArea/home">
+        <mat-icon>book</mat-icon>
+        All Packages
+      </a>
+
+      <a mat-list-item  routerLink="/memberArea/home">
+        <mat-icon>folder</mat-icon>
+        All Orders
+      </a>
+
+      <a mat-list-item  routerLink="/memberArea/home">
+        <mat-icon>account_circle</mat-icon>
+        User Management
+      </a>
+      <!-- end -->
       <!-- <a mat-list-item href="/memberArea/trip">
         <mat-icon>directions_car</mat-icon>
         Trips
       </a> -->
+      <!-- Custommer Menu -->
       <a mat-list-item  routerLink="/memberArea/home">
         <mat-icon>home</mat-icon>
         Home
       </a>
+
+      <a mat-list-item routerLink="/memberArea/orders">
+        <mat-icon>folder</mat-icon>
+       My Orders
+      </a>
+      <!-- end -->
+      <!-- Business Menu -->
       <a mat-list-item routerLink="/memberArea/upload" >
         <mat-icon>perm_media</mat-icon>
         Upload
       </a>
+
+      <a mat-list-item routerLink="/memberArea/watchlist">
+        <mat-icon>visibility</mat-icon>
+        WatchList
+      </a>
+
+      <a mat-list-item routerLink="/memberArea/orders">
+        <mat-icon>folder</mat-icon>
+        Orders
+      </a>
+      <!-- end -->
       
       <a mat-list-item routerLink="/memberArea/account">
         <mat-icon>account_circle</mat-icon>
@@ -30,10 +66,7 @@
         <mat-icon>message</mat-icon>
         Messages
       </a>
-      <a mat-list-item routerLink="/memberArea/orders">
-        <mat-icon>folder</mat-icon>
-        Orders
-      </a>
+    
       <a mat-list-item routerLink="/memberArea/watchlist">
         <mat-icon>visibility</mat-icon>
         WatchList

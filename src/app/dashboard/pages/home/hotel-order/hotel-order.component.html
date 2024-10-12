@@ -21,7 +21,7 @@
             <p>{{ hotel.hotelName }}</p>
             <p>{{ hotel.hotelLocation }}</p>
             <p>{{ hotel.hotelPrice | currency }}</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+            <a (click)="openModal(data, hotel.hotelPackageId)" id="data" class="btn btn-primary">Book Now</a>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
   
 
   <!-- form -->
-  <ng-template #add let-c="close" let-d="dismiss">
+  <ng-template #data let-c="close" let-d="dismiss">
     <div class="modal-header">
       <h2 class="modal-title" id="modal-basic-title">Set Your Book Now</h2>
       <button
@@ -111,3 +111,18 @@
       </form>
     </div>
   </ng-template>
+
+  <!-- Payment Methods Modal -->
+<ng-template #paymentMethodsModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h2 class="modal-title">Select Payment Method</h2>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <button mat-raised-button color="primary" >Visa</button>
+      <button mat-raised-button color="accent" >M-Pesa</button>
+      <button mat-raised-button color="warn" >Tigo Pesa</button>
+    </div>
+  </div>
+</ng-template>
