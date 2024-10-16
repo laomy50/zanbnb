@@ -15,7 +15,8 @@
   
 .card{
     max-height: 900px;
-    margin-top: -185px;
+    margin-top: -85px;
+    border-radius: 10%;
 }
 
 form{
