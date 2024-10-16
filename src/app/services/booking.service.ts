@@ -46,180 +46,180 @@ export class BookingService {
 
         // TripBooking Method
         createTripBooking(bookingData: any): Observable<any> {
-          return this.http.post(`${this.baseUrl}`, bookingData);
+          return this.http.post(`${this.baseUrlTri}`, bookingData);
         }
       
         getAllTripBookings(): Observable<any[]> {
-          return this.http.get<any[]>(this.baseUrl);
+          return this.http.get<any[]>(this.baseUrlTri);
         }
       
         getTripBookingById(bookingId: number): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlTri}/${bookingId}`;
           return this.http.get<any>(url);
         }
       
         updateTripBooking(bookingId: number, updatedBooking: any): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlTri}/${bookingId}`;
           return this.http.put<any>(url, updatedBooking);
         }
         // END
 
             // SpiceBooking Method
             createTransportBooking(bookingData: any): Observable<any> {
-              return this.http.post(`${this.baseUrl}`, bookingData);
+              return this.http.post(`${this.baseUrlTra}`, bookingData);
             }
           
             getAllTransportBookings(): Observable<any[]> {
-              return this.http.get<any[]>(this.baseUrl);
+              return this.http.get<any[]>(this.baseUrlTra);
             }
           
             getTransportBookingById(bookingId: number): Observable<any> {
-              const url = `${this.baseUrl}/${bookingId}`;
+              const url = `${this.baseUrlTra}/${bookingId}`;
               return this.http.get<any>(url);
             }
           
             updateTransportBooking(bookingId: number, updatedBooking: any): Observable<any> {
-              const url = `${this.baseUrl}/${bookingId}`;
+              const url = `${this.baseUrlTra}/${bookingId}`;
               return this.http.put<any>(url, updatedBooking);
             }
             // END
 
           // SpiceBooking Method
           createSportBooking(bookingData: any): Observable<any> {
-            return this.http.post(`${this.baseUrl}`, bookingData);
+            return this.http.post(`${this.baseUrlSpo}`, bookingData);
           }
         
           getAllSportBookings(): Observable<any[]> {
-            return this.http.get<any[]>(this.baseUrl);
+            return this.http.get<any[]>(this.baseUrlSpo);
           }
         
           getSportBookingById(bookingId: number): Observable<any> {
-            const url = `${this.baseUrl}/${bookingId}`;
+            const url = `${this.baseUrlSpo}/${bookingId}`;
             return this.http.get<any>(url);
           }
         
           updateSportBooking(bookingId: number, updatedBooking: any): Observable<any> {
-            const url = `${this.baseUrl}/${bookingId}`;
+            const url = `${this.baseUrlSpo}/${bookingId}`;
             return this.http.put<any>(url, updatedBooking);
           }
           // END
 
         // SpiceBooking Method
         createSpiceBooking(bookingData: any): Observable<any> {
-          return this.http.post(`${this.baseUrl}`, bookingData);
+          return this.http.post(`${this.baseUrlSpi}`, bookingData);
         }
       
         getAllSpiceBookings(): Observable<any[]> {
-          return this.http.get<any[]>(this.baseUrl);
+          return this.http.get<any[]>(this.baseUrlSpi);
         }
       
         getSpiceBookingById(bookingId: number): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlSpi}/${bookingId}`;
           return this.http.get<any>(url);
         }
       
         updateSpiceBooking(bookingId: number, updatedBooking: any): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlSpi}/${bookingId}`;
           return this.http.put<any>(url, updatedBooking);
         }
         // END
 
         // ShoppingBooking Method
         createShoppingBooking(bookingData: any): Observable<any> {
-          return this.http.post(`${this.baseUrl}`, bookingData);
+          return this.http.post(`${this.baseUrlSh}`, bookingData);
         }
       
         getAllShoppingBookings(): Observable<any[]> {
-          return this.http.get<any[]>(this.baseUrl);
+          return this.http.get<any[]>(this.baseUrlSh);
         }
       
         getShoppingBookingById(bookingId: number): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlSh}/${bookingId}`;
           return this.http.get<any>(url);
         }
       
         updateShoppingBooking(bookingId: number, updatedBooking: any): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlSh}/${bookingId}`;
           return this.http.put<any>(url, updatedBooking);
         }
         // END
 
           // RestaurantBooking Method
           createRestaurantBooking(bookingData: any): Observable<any> {
-            return this.http.post(`${this.baseUrl}`, bookingData);
+            return this.http.post(`${this.baseUrlR}`, bookingData);
           }
         
           getAllRestaurantBookings(): Observable<any[]> {
-            return this.http.get<any[]>(this.baseUrl);
+            return this.http.get<any[]>(this.baseUrlR);
           }
         
           getRestaurantBookingById(bookingId: number): Observable<any> {
-            const url = `${this.baseUrl}/${bookingId}`;
+            const url = `${this.baseUrlR}/${bookingId}`;
             return this.http.get<any>(url);
           }
         
           updateRestaurantBooking(bookingId: number, updatedBooking: any): Observable<any> {
-            const url = `${this.baseUrl}/${bookingId}`;
+            const url = `${this.baseUrlR}/${bookingId}`;
             return this.http.put<any>(url, updatedBooking);
           }
           // END
 
         // HotelBooking Method
         createHotelBooking(bookingData: any): Observable<any> {
-          return this.http.post(`${this.baseUrl}`, bookingData);
+          return this.http.post(`${this.baseUrlHo}`, bookingData);
         }
       
         getAllHotelBookings(): Observable<any[]> {
-          return this.http.get<any[]>(this.baseUrl);
+          return this.http.get<any[]>(this.baseUrlHo);
         }
       
         getHotelBookingById(bookingId: number): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlHo}/${bookingId}`;
           return this.http.get<any>(url);
         }
       
         updateHotelBooking(bookingId: number, updatedBooking: any): Observable<any> {
-          const url = `${this.baseUrl}/${bookingId}`;
+          const url = `${this.baseUrlHo}/${bookingId}`;
           return this.http.put<any>(url, updatedBooking);
         }
         // END
 
       // ForestBooking Method
       createHistoricalBooking(bookingData: any): Observable<any> {
-        return this.http.post(`${this.baseUrl}`, bookingData);
+        return this.http.post(`${this.baseUrlHi}`, bookingData);
       }
     
       getAllHistoricalBookings(): Observable<any[]> {
-        return this.http.get<any[]>(this.baseUrl);
+        return this.http.get<any[]>(this.baseUrlHi);
       }
     
       getHistoricalBookingById(bookingId: number): Observable<any> {
-        const url = `${this.baseUrl}/${bookingId}`;
+        const url = `${this.baseUrlHi}/${bookingId}`;
         return this.http.get<any>(url);
       }
     
       updateHistoricalBooking(bookingId: number, updatedBooking: any): Observable<any> {
-        const url = `${this.baseUrl}/${bookingId}`;
+        const url = `${this.baseUrlHi}/${bookingId}`;
         return this.http.put<any>(url, updatedBooking);
       }
       // END
 
     // ForestBooking Method
     createForestBooking(bookingData: any): Observable<any> {
-      return this.http.post(`${this.baseUrl}`, bookingData);
+      return this.http.post(`${this.baseUrlF}`, bookingData);
     }
   
     getAllForestBookings(): Observable<any[]> {
-      return this.http.get<any[]>(this.baseUrl);
+      return this.http.get<any[]>(this.baseUrlF);
     }
   
     getForestById(bookingId: number): Observable<any> {
-      const url = `${this.baseUrl}/${bookingId}`;
+      const url = `${this.baseUrlF}/${bookingId}`;
       return this.http.get<any>(url);
     }
   
     updateForestBooking(bookingId: number, updatedBooking: any): Observable<any> {
-      const url = `${this.baseUrl}/${bookingId}`;
+      const url = `${this.baseUrlF}/${bookingId}`;
       return this.http.put<any>(url, updatedBooking);
     }
   

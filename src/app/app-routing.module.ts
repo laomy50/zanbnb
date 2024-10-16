@@ -43,7 +43,7 @@ children:[
   {path:'watchlist',component:WatchlistComponent},
   {path:'upload',component:UploadComponent},
   {path:'myorders',component:MyordersComponent},
-  {path:'allpackages',component:AllpackagesComponent},
+  {path:'allpackages',component:WatchlistComponent},
   {path:'usermanagement',component:UsermanagementComponent},
   {path:'allorders',component:AllordersComponent},
 ]},

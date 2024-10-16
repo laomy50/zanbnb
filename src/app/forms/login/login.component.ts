@@ -31,6 +31,7 @@ export class LoginComponent {
       },
       error => {
         console.error('Login error:', error);
+        alert('Server Responded with Error');
       }
     );
   }

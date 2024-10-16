@@ -53,6 +53,7 @@ export class ForestListComponent implements OnInit{
     .subscribe(
       (response: ForestPackage[]) => {
         this.dataSource2 = new MatTableDataSource(response);
+        console.log("Processed response: ", this.dataSource2);
         this.dataSource2.paginator = this.paginator2;
       },
       (error: HttpErrorResponse) => {

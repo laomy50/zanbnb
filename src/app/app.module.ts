@@ -93,6 +93,17 @@ import { AllpackagesComponent } from './staffcomponent/allpackages/allpackages.c
 import { AllordersComponent } from './staffcomponent/allorders/allorders.component';
 import { UsermanagementComponent } from './staffcomponent/usermanagement/usermanagement.component';
 import { MyordersComponent } from './clientcomponent/myorders/myorders.component';
+import { AllbeachOrdersComponent } from './staffcomponent/allorders/allbeach-orders/allbeach-orders.component';
+import { AllforestOrdersComponent } from './staffcomponent/allorders/allforest-orders/allforest-orders.component';
+import { AllhistoricalOrdersComponent } from './staffcomponent/allorders/allhistorical-orders/allhistorical-orders.component';
+import { AllhotelOrdersComponent } from './staffcomponent/allorders/allhotel-orders/allhotel-orders.component';
+import { AllrentsOrdersComponent } from './staffcomponent/allorders/allrents-orders/allrents-orders.component';
+import { AllrestaurantOrdersComponent } from './staffcomponent/allorders/allrestaurant-orders/allrestaurant-orders.component';
+import { AllshopOrdersComponent } from './staffcomponent/allorders/allshop-orders/allshop-orders.component';
+import { AllspiceOrdersComponent } from './staffcomponent/allorders/allspice-orders/allspice-orders.component';
+import { AllsportOrdersComponent } from './staffcomponent/allorders/allsport-orders/allsport-orders.component';
+import { AlltransportOrdersComponent } from './staffcomponent/allorders/alltransport-orders/alltransport-orders.component';
+import { AlltripsOrdersComponent } from './staffcomponent/allorders/alltrips-orders/alltrips-orders.component';
 
 
 @NgModule({
@@ -162,6 +173,17 @@ import { MyordersComponent } from './clientcomponent/myorders/myorders.component
     AllordersComponent,
     UsermanagementComponent,
     MyordersComponent,
+    AllbeachOrdersComponent,
+    AllforestOrdersComponent,
+    AllhistoricalOrdersComponent,
+    AllhotelOrdersComponent,
+    AllrentsOrdersComponent,
+    AllrestaurantOrdersComponent,
+    AllshopOrdersComponent,
+    AllspiceOrdersComponent,
+    AllsportOrdersComponent,
+    AlltransportOrdersComponent,
+    AlltripsOrdersComponent,
 
    
   ],
