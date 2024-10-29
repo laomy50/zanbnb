@@ -16,6 +16,8 @@ import { ShowBeachesComponent } from '../../../../packages/show-beaches/show-bea
   styleUrl: './beach-list.component.css'
 })
 export class BeachListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class BeachListComponent implements OnInit{
     'beachPrice',
     'beachLocation',
     'beachImages',
+    'action',
     
   ];
 
@@ -78,6 +81,10 @@ export class BeachListComponent implements OnInit{
       height:'500px',
       width:'800px',
     });
+  }
+
+  delete(id:any){
+
   }
 
 

@@ -16,12 +16,15 @@ import { ShowShoppComponent } from '../../../../packages/show-shopp/show-shopp.c
 })
 export class ShoppListComponent {
 
+  id:any;
+
   displayedColumns3: string[] = [
     'index',
     'shoppingName',
     'shoppingPrice',
     'shoppingLocation',
     'shoppingImages',
+    'action',
     
   ];
 
@@ -76,5 +79,7 @@ applyFilterPayment(event: Event) {
       width:'800px',
     });
   }
+
+  delete(id:any){}
 
 }

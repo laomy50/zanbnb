@@ -16,6 +16,8 @@ import { ShowRestaurantComponent } from '../../../../packages/show-restaurant/sh
   styleUrl: './restaurant-list.component.css'
 })
 export class RestaurantListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class RestaurantListComponent implements OnInit{
     'restaurantPrice',
     'restaurantLocation',
     'restaurantImages',
+    'action'
     
   ];
 
@@ -80,5 +83,6 @@ export class RestaurantListComponent implements OnInit{
     });
   }
 
+  delete(id:any){}
 
 }

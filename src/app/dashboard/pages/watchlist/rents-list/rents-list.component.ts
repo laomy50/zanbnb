@@ -16,12 +16,15 @@ import { ShowRentsComponent } from '../../../../packages/show-rents/show-rents.c
 })
 export class RentsListComponent {
 
+  id:any;
+
   displayedColumns2: string[] = [
     'index',
     'rentName',
     'rentPrice',
     'rentLocation',
     'rentImages',
+    'action'
     
   ];
 
@@ -74,5 +77,7 @@ export class RentsListComponent {
       width:'800px',
     });
   }
+
+  delete(id:any){}
 
 }

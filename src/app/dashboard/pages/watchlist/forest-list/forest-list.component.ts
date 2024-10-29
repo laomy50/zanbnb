@@ -16,6 +16,9 @@ import { ShowForestsComponent } from '../../../../packages/show-forests/show-for
   styleUrl: './forest-list.component.css'
 })
 export class ForestListComponent implements OnInit{
+
+  id:any;
+  
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +26,7 @@ export class ForestListComponent implements OnInit{
     'forestPrice',
     'forestLocation',
     'forestImages',
+    'action',
     
   ];
 
@@ -81,5 +85,6 @@ export class ForestListComponent implements OnInit{
     });
   }
 
+  delete(id:any){}
 
 }

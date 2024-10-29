@@ -16,6 +16,8 @@ import { ShowHotelComponent } from '../../../../packages/show-hotel/show-hotel.c
   styleUrl: './hotel-list.component.css'
 })
 export class HotelListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class HotelListComponent implements OnInit{
     'hotelPrice',
     'hotelLocation',
     'hotelImages',
+    'action',
     
   ];
 
@@ -79,5 +82,6 @@ export class HotelListComponent implements OnInit{
     });
   }
 
+  delete(id:any){}
 
 }

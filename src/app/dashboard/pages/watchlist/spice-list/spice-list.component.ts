@@ -16,6 +16,8 @@ import { ShowSpiciesComponent } from '../../../../packages/show-spicies/show-spi
   styleUrl: './spice-list.component.css'
 })
 export class SpiceListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class SpiceListComponent implements OnInit{
     'spiciesPrice',
     'spiciesLocation',
     'spiciesImages',
+    'action',
     
   ];
 
@@ -80,5 +83,6 @@ export class SpiceListComponent implements OnInit{
     });
   }
 
+  delete(id:any){}
 
 }

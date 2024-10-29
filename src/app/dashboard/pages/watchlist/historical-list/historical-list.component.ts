@@ -17,12 +17,15 @@ import { ShowHistoricalComponent } from '../../../../packages/show-historical/sh
 })
 export class HistoricalListComponent implements OnInit{
   
+  id:any;
+  
   displayedColumns2: string[] = [
     'index',
     'historicalName',
     'historicalPrice',
     'historicalLocation',
     'historicalImages',
+    'action',
     
   ];
 
@@ -78,6 +81,10 @@ export class HistoricalListComponent implements OnInit{
       height:'500px',
       width:'800px',
     });
+  }
+
+  delete(id:any){
+
   }
 
 

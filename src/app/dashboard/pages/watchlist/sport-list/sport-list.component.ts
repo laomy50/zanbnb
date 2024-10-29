@@ -23,6 +23,7 @@ export class SportListComponent implements OnInit{
     'sportPrice',
     'sportLocation',
     'sportImages',
+    'action'
     
   ];
 
@@ -79,6 +80,8 @@ export class SportListComponent implements OnInit{
       width:'800px',
     });
   }
+
+  delete(id:any){}
 
 
 }

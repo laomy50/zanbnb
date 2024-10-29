@@ -16,6 +16,8 @@ import { ShowTripsComponent } from '../../../../packages/show-trips/show-trips.c
   styleUrl: './trips-list.component.css'
 })
 export class TripsListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class TripsListComponent implements OnInit{
     'tripPrice',
     'tripLocation',
     'tripImages',
+    'action',
     
   ];
 
@@ -80,5 +83,8 @@ export class TripsListComponent implements OnInit{
     });
   }
 
+  delete(id:any){
+  
+  }
 
 }

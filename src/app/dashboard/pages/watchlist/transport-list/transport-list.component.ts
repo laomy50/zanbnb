@@ -16,6 +16,8 @@ import { ShowTransportsComponent } from '../../../../packages/show-transports/sh
   styleUrl: './transport-list.component.css'
 })
 export class TransportListComponent implements OnInit{
+
+  id:any;
   
   displayedColumns2: string[] = [
     'index',
@@ -23,6 +25,7 @@ export class TransportListComponent implements OnInit{
     'transportPrice',
     'transportLocation',
     'transportImages',
+    'action',
     
   ];
 
@@ -80,5 +83,6 @@ export class TransportListComponent implements OnInit{
     });
   }
 
+  delete(id:any){}
 
 }
