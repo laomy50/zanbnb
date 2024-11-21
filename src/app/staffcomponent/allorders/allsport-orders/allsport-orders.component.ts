@@ -35,12 +35,12 @@ export class AllsportOrdersComponent {
 
   ngOnInit(): void {
     this.dataSource2.paginator = this.paginator2;
-    this.getAllRentOrders();
+    this.getAllSportOrders();
   }
 
   // all rents
-  public getAllRentOrders() {
-    this.bookingService.getAllRentBookings()
+  public getAllSportOrders() {
+    this.bookingService.getAllSportBookings()
    
     .subscribe(
       (response: any[]) => {

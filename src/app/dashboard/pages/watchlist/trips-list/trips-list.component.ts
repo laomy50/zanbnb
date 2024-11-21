@@ -25,7 +25,7 @@ export class TripsListComponent implements OnInit{
     'tripPrice',
     'tripLocation',
     'tripImages',
-    'action',
+    // 'action',
     
   ];
 

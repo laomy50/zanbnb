@@ -19,4 +19,9 @@ export class SportService {
   getAllSportPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllSportPackages`);
  }
+
+ deleteSportPackage(sportPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${sportPackageId}`);
+ }
+
 }

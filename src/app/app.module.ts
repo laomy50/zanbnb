@@ -104,6 +104,19 @@ import { AllspiceOrdersComponent } from './staffcomponent/allorders/allspice-ord
 import { AllsportOrdersComponent } from './staffcomponent/allorders/allsport-orders/allsport-orders.component';
 import { AlltransportOrdersComponent } from './staffcomponent/allorders/alltransport-orders/alltransport-orders.component';
 import { AlltripsOrdersComponent } from './staffcomponent/allorders/alltrips-orders/alltrips-orders.component';
+import { UserModalComponent } from './staffcomponent/user-modal/user-modal.component';
+import { MyrentsorderComponent } from './clientcomponent/myrentsorder/myrentsorder.component';
+import { MybeachorderComponent } from './clientcomponent/mybeachorder/mybeachorder.component';
+import { MyforestorderComponent } from './clientcomponent/myforestorder/myforestorder.component';
+import { MyhistoricalorderComponent } from './clientcomponent/myhistoricalorder/myhistoricalorder.component';
+import { MyhotelorderComponent } from './clientcomponent/myhotelorder/myhotelorder.component';
+import { MyrestaurantorderComponent } from './clientcomponent/myrestaurantorder/myrestaurantorder.component';
+import { MyshoporderComponent } from './clientcomponent/myshoporder/myshoporder.component';
+import { MyspiceorderComponent } from './clientcomponent/myspiceorder/myspiceorder.component';
+import { MysportorderComponent } from './clientcomponent/mysportorder/mysportorder.component';
+import { MytransportorderComponent } from './clientcomponent/mytransportorder/mytransportorder.component';
+import { MytriporderComponent } from './clientcomponent/mytriporder/mytriporder.component';
+
 
 
 @NgModule({
@@ -184,6 +197,18 @@ import { AlltripsOrdersComponent } from './staffcomponent/allorders/alltrips-ord
     AllsportOrdersComponent,
     AlltransportOrdersComponent,
     AlltripsOrdersComponent,
+    UserModalComponent,
+    MyrentsorderComponent,
+    MybeachorderComponent,
+    MyforestorderComponent,
+    MyhistoricalorderComponent,
+    MyhotelorderComponent,
+    MyrestaurantorderComponent,
+    MyshoporderComponent,
+    MyspiceorderComponent,
+    MysportorderComponent,
+    MytransportorderComponent,
+    MytriporderComponent
 
    
   ],

@@ -25,7 +25,7 @@ export class SpiceListComponent implements OnInit{
     'spiciesPrice',
     'spiciesLocation',
     'spiciesImages',
-    'action',
+    // 'action',
     
   ];
 

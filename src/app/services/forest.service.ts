@@ -19,4 +19,9 @@ export class ForestService {
   getAllForestPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllForestPackages`);
  }
+
+ deleteForestPackage(forestPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${forestPackageId}`);
+ }
+
 }

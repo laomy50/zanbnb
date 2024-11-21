@@ -19,4 +19,9 @@ export class SpiciesService {
   getAllSpiciesPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllSpicePackages`);
  }
+
+ deleteSpiciesPackage(spiciesPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${spiciesPackageId}`);
+ }
+
 }

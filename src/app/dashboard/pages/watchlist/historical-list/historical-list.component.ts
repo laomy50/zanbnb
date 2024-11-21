@@ -25,7 +25,7 @@ export class HistoricalListComponent implements OnInit{
     'historicalPrice',
     'historicalLocation',
     'historicalImages',
-    'action',
+    // 'action',
     
   ];
 

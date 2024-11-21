@@ -25,7 +25,7 @@ export class TransportListComponent implements OnInit{
     'transportPrice',
     'transportLocation',
     'transportImages',
-    'action',
+    // 'action',
     
   ];
 

@@ -19,4 +19,9 @@ export class HistoricalService {
   getAllHistoricalPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllHistoricalPackages`);
  }
+
+ deleteHistoricalPackage( historicalPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${historicalPackageId}`);
+ }
+
 }

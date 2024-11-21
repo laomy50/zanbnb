@@ -19,4 +19,9 @@ export class TripService {
   getAllTripPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllTripPackages`);
  }
+
+ deleteTripPackage(tripPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${tripPackageId}`);
+ }
+
 }

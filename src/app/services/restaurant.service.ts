@@ -19,4 +19,10 @@ export class RestaurantService {
   getAllRestaurantPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllRestaurantPackages`);
  }
+
+ 
+ deleteRestaurantPackage(restaurantPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${restaurantPackageId}`);
+ }
+
 }

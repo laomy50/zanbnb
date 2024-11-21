@@ -1,0 +1,52 @@
+
+<div class="register-box">
+    <mat-card class="card">
+    <div class="register-logo text-center">
+        <img src="../../../assets/znz.jpg" style="height: 100px; border-radius: 50%;margin-top:15px">
+    </div>
+    <div class="register-box-body">
+        <p class="login-box-msg"></p>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+                <input type="text" class="form-control input-with-border" placeholder="F.Name" name="firstName" [(ngModel)]="user.firstName" required>
+            </div>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control input-with-border" placeholder="L.Name" name="lastName" [(ngModel)]="user.lastName" required>
+            </div>
+            <div class="form-group mb-3">
+                <input type="email" class="form-control input-with-border" placeholder="Email" name="email" [(ngModel)]="user.email" required>
+            </div>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control input-with-border" placeholder="Username" name="username" [(ngModel)]="user.username" required>
+            </div>
+            
+            <div class="form-group mb-3">
+                <input type="password" class="form-control input-with-border" placeholder="Password" name="password" [(ngModel)]="user.password" required>
+            </div>
+            <div class="single-column" style="position: relative; z-index: 9999;">
+                <mat-form-field class="full-width" style="width: 100%;">
+                  <mat-label>Membership Type</mat-label>
+                  <mat-select placeholder="Select Membership" name="membershipType" [(ngModel)]="user.role_id" required panelClass="custom-select-panel">
+                    <mat-option value="2">Client Member</mat-option>
+                    <mat-option value="3">Business Member</mat-option>
+                    <mat-option value="4">Staff Member</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+                      
+            <div class="form-group">
+                <button class="btn btn-primary btn-block custom-width" type="submit">
+                    <i class="fa mr-2"></i> Register
+                </button>
+                <button mat-button (click)="closeDialog()">Close</button>
+            </div>
+                        
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+           
+        </div>
+    </div>
+</mat-card>
+</div>

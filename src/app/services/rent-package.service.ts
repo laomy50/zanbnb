@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class RentPackageService {
 
   private baseUrl = environment.baseUrl + '/rentPackage';
+  
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,6 +23,8 @@ export class RentPackageService {
   }
 
 
-  
+  deleteRentPackage(rentPackageId:any):Observable<any>{
+    return this.httpClient.delete(`${this.baseUrl}/${rentPackageId}`);
+   }
 
 }

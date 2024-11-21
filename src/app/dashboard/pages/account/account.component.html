@@ -1,1 +1,32 @@
-<p>account works!</p>
+<div class="container" style="margin: 20px;">
+    <h2 class="title" style="text-align: center;">User Details</h2>
+  <div class="row">
+    <div class="col-md-12">
+
+   
+    <!-- User Details -->
+    <div *ngIf="user" class="user-details" style="display: flex; justify-content: center; margin-top: 20px;">
+      <mat-card style="width: 400px; padding: 20px;">
+        <h3 style="text-align: center; color: #3f51b5;">User Information</h3>
+        <ul style="list-style-type: none; padding: 0;">
+          <li style="margin: 10px 0;">
+            <strong>First Name:</strong> {{ user.firstName }}
+          </li>
+          <li style="margin: 10px 0;">
+            <strong>Last Name:</strong> {{ user.lastName }}
+          </li>
+        
+          <li style="margin: 10px 0;">
+            <strong>User Name:</strong> {{ user.email }}
+          </li>
+          <li style="margin: 10px 0;">
+            <strong>Email:</strong> {{ user.username }}
+          </li>
+        
+        </ul>
+      </mat-card>
+    </div>
+</div>
+</div>
+  </div>
+  

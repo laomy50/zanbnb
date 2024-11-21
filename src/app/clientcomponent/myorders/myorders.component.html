@@ -1,72 +1,124 @@
-<mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-  </mat-form-field>
   
-  <div class="mat-elevation-z2">
-    <table mat-table [dataSource]="dataSource" matSort>
-  
-      <!-- ID Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-      </ng-container>
-  
-      <!-- Phone Column -->
-      <ng-container matColumnDef="phone">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
-        <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-      </ng-container>
-  
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
-      </ng-container>
-  
-      <!-- Email Column -->
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-        <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
-      </ng-container>
+<h1 style="text-align: center; padding: 1em 0">List Of Orders</h1>
+<div class="mat-elevation-z2" style="border-radius: 24px;">
+  <mat-tab-group fitInkBarToContent>
+    <!-- Rent -->
+    <mat-tab label="Rent">
+      <ng-template mat-tab-label>
+        <mat-icon>house</mat-icon>&nbsp;
+        <span>Rent Package</span>
+      </ng-template>
+      <br>
+      <app-myrentsorder/>
+    </mat-tab>
 
-          <!-- Status Column -->
-          <ng-container matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
-            <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
-          </ng-container>
+    <!--Shopping -->
+    <mat-tab label="Shopping">
+      <ng-template mat-tab-label>
+        <mat-icon>add_shopping_cart</mat-icon>&nbsp;
+        <span>Shopping Package</span>
+      </ng-template>
+      <br/>
+        <app-myshoporder/>
+    </mat-tab>
 
-             <!-- Action Column -->
-             <ng-container matColumnDef="action">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
-              <td mat-cell *matCellDef="let row">
-                <button
-                mat-mini-fab
-                matTooltip="Make Payment"
-                color="primary"
-                aria-label="Example mini fab with a heart icon"
-                (click)="open(payment)"
-                [disabled]="row.paymentStatus == 'Paid'"
-              >
-                <img
-                  src="assets/wallet-info.png"
-                  alt="Credit Card"
-                  style="border-radius: 50%"
-                />
-              </button>
-              </td>
-            </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  
-      <!-- Row shown when there is no matching data. -->
-      <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-      </tr>
-    </table>
-  
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-  </div>
-  
-  
+    <!-- Spicies -->
+    <mat-tab label="Spicies">
+      <ng-template mat-tab-label>
+        <mat-icon>spa</mat-icon>&nbsp;
+        <span>Spicies Package</span>
+      </ng-template>
+      <br/>
+     <app-myspiceorder/>
+    </mat-tab>
+
+    <!-- Restaurant -->
+    <mat-tab label="Restaurants">
+      <ng-template mat-tab-label>
+        <mat-icon>restaurant</mat-icon>&nbsp;
+        <span>Restaurants Package</span>
+      </ng-template>
+      <br/>
+      <app-myrestaurantorder/>
+    </mat-tab>
+
+    <!-- Hotel -->
+    <mat-tab label="Hotels">
+      <ng-template mat-tab-label>
+        <mat-icon>Hotel</mat-icon>&nbsp;
+        <span>Hotels Package</span>
+      </ng-template>
+        <br>
+       <app-myhotelorder/>
+    </mat-tab>
+
+    <!-- History -->
+    <mat-tab label="Historical Site">
+      <ng-template mat-tab-label>
+        <mat-icon>history</mat-icon>&nbsp;
+        <span>Historical Site Package</span>
+      </ng-template>
+     <br/>
+      <app-myhistoricalorder/>
+    </mat-tab>
+
+    <!-- Sports -->
+    <mat-tab label="Sports">
+      <ng-template mat-tab-label>
+        <mat-icon>sports</mat-icon>&nbsp;
+        <span>Sports Package</span>
+      </ng-template>
+      <br>
+      <app-mysportorder/>
+    </mat-tab>
+
+    <!-- transport -->
+    <mat-tab label="Transports">
+      <ng-template mat-tab-label>
+        <mat-icon>motorcycle</mat-icon>&nbsp;
+        <span>Transports Package</span>
+      </ng-template>
+      <br>
+      <app-mytransportorder/>
+    </mat-tab>
+
+    <!-- Forest -->
+    <mat-tab label="Forest">
+      <ng-template mat-tab-label>
+        <mat-icon>forest</mat-icon>&nbsp;
+        <span>Forest Package</span>
+      </ng-template>
+      <br>
+     <app-myforestorder/>
+    </mat-tab>
+
+    <!-- Beach -->
+    <mat-tab label="Beach">
+      <ng-template mat-tab-label>
+        <mat-icon>water</mat-icon>&nbsp;
+        <span>Beach Package</span>
+      </ng-template>
+      <br>
+      <app-mybeachorder/>
+    </mat-tab>
+
+    <!-- Trips -->
+    <mat-tab label="Trips">
+      <ng-template mat-tab-label>
+        <mat-icon>flight_land</mat-icon>&nbsp;
+        <span>Trips Package</span>
+      </ng-template>
+      <br>
+    <app-mytriporder/>
+    </mat-tab>
+  </mat-tab-group>
+  <br>
+</div>
+
+
+
+
+
+ 
+
+

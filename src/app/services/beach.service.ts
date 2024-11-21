@@ -19,4 +19,8 @@ export class BeachService {
   getAllBeachPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllBeachPackages`);
  }
+
+ deleteBeachPackage(beachPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${beachPackageId}`);
+ }
 }

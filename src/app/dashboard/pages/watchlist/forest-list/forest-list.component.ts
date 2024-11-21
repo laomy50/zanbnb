@@ -26,7 +26,7 @@ export class ForestListComponent implements OnInit{
     'forestPrice',
     'forestLocation',
     'forestImages',
-    'action',
+    // 'action',
     
   ];
 

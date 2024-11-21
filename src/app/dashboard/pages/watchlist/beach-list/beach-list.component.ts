@@ -25,7 +25,7 @@ export class BeachListComponent implements OnInit{
     'beachPrice',
     'beachLocation',
     'beachImages',
-    'action',
+    // 'action',
     
   ];
 

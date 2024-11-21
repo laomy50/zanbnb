@@ -23,7 +23,7 @@ export class SportListComponent implements OnInit{
     'sportPrice',
     'sportLocation',
     'sportImages',
-    'action'
+    // 'action'
     
   ];
 

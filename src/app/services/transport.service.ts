@@ -20,4 +20,9 @@ export class TransportService {
   getAllTransportPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllTransportPackages`);
  }
+
+ deleteTransportPackage(transportPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${transportPackageId}`);
+ }
+
 }

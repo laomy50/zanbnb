@@ -57,6 +57,11 @@ export class BookingService {
           const url = `${this.baseUrlTri}/${bookingId}`;
           return this.http.get<any>(url);
         }
+
+          getTripByUserId(userId: number): Observable<any> {
+         const url = `${this.baseUrlTri}/user/${userId}`;
+          return this.http.get<any>(url);
+       }
       
         updateTripBooking(bookingId: number, updatedBooking: any): Observable<any> {
           const url = `${this.baseUrlTri}/${bookingId}`;
@@ -75,6 +80,11 @@ export class BookingService {
           
             getTransportBookingById(bookingId: number): Observable<any> {
               const url = `${this.baseUrlTra}/${bookingId}`;
+              return this.http.get<any>(url);
+            }
+
+            getTransportByUserId(userId: number): Observable<any> {
+              const url = `${this.baseUrlTra}/user/${userId}`;
               return this.http.get<any>(url);
             }
           
@@ -97,6 +107,11 @@ export class BookingService {
             const url = `${this.baseUrlSpo}/${bookingId}`;
             return this.http.get<any>(url);
           }
+
+          getSportByUserId(userId: number): Observable<any> {
+            const url = `${this.baseUrlSpo}/user/${userId}`;
+            return this.http.get<any>(url);
+          }
         
           updateSportBooking(bookingId: number, updatedBooking: any): Observable<any> {
             const url = `${this.baseUrlSpo}/${bookingId}`;
@@ -115,6 +130,11 @@ export class BookingService {
       
         getSpiceBookingById(bookingId: number): Observable<any> {
           const url = `${this.baseUrlSpi}/${bookingId}`;
+          return this.http.get<any>(url);
+        }
+
+        getSpiceByUserId(userId: number): Observable<any> {
+          const url = `${this.baseUrlSpi}/user/${userId}`;
           return this.http.get<any>(url);
         }
       
@@ -137,6 +157,11 @@ export class BookingService {
           const url = `${this.baseUrlSh}/${bookingId}`;
           return this.http.get<any>(url);
         }
+
+        getShoppingByUserId(userId: number): Observable<any> {
+          const url = `${this.baseUrlSh}/user/${userId}`;
+          return this.http.get<any>(url);
+        }
       
         updateShoppingBooking(bookingId: number, updatedBooking: any): Observable<any> {
           const url = `${this.baseUrlSh}/${bookingId}`;
@@ -155,6 +180,11 @@ export class BookingService {
         
           getRestaurantBookingById(bookingId: number): Observable<any> {
             const url = `${this.baseUrlR}/${bookingId}`;
+            return this.http.get<any>(url);
+          }
+
+          getRestaurantByUserId(userId: number): Observable<any> {
+            const url = `${this.baseUrlR}/user/${userId}`;
             return this.http.get<any>(url);
           }
         
@@ -177,6 +207,11 @@ export class BookingService {
           const url = `${this.baseUrlHo}/${bookingId}`;
           return this.http.get<any>(url);
         }
+
+        getHotelByUserId(userId: number): Observable<any> {
+          const url = `${this.baseUrlHo}/user/${userId}`;
+          return this.http.get<any>(url);
+        }
       
         updateHotelBooking(bookingId: number, updatedBooking: any): Observable<any> {
           const url = `${this.baseUrlHo}/${bookingId}`;
@@ -197,6 +232,11 @@ export class BookingService {
         const url = `${this.baseUrlHi}/${bookingId}`;
         return this.http.get<any>(url);
       }
+
+      getHistoricalByUserId(userId: number): Observable<any> {
+        const url = `${this.baseUrlHi}/user/${userId}`;
+        return this.http.get<any>(url);
+      }
     
       updateHistoricalBooking(bookingId: number, updatedBooking: any): Observable<any> {
         const url = `${this.baseUrlHi}/${bookingId}`;
@@ -215,6 +255,11 @@ export class BookingService {
   
     getForestById(bookingId: number): Observable<any> {
       const url = `${this.baseUrlF}/${bookingId}`;
+      return this.http.get<any>(url);
+    }
+
+    getForestByUserId(userId: number): Observable<any> {
+      const url = `${this.baseUrlF}/user/${userId}`;
       return this.http.get<any>(url);
     }
   
@@ -239,6 +284,11 @@ export class BookingService {
     return this.http.get<any>(url);
   }
 
+  getBeachByUserId(userId: number): Observable<any> {
+    const url = `${this.baseUrlB}/user/${userId}`;
+    return this.http.get<any>(url);
+  }
+
   updateBeachBooking(bookingId: number, updatedBooking: any): Observable<any> {
     const url = `${this.baseUrlB}/${bookingId}`;
     return this.http.put<any>(url, updatedBooking);
@@ -260,9 +310,19 @@ export class BookingService {
     return this.http.get<any>(url);
   }
 
+  getRentByUserId(userId: number): Observable<any> {
+    const url = `${this.baseUrl}/user/${userId}`;
+    return this.http.get<any>(url);
+  }
+
   updateRentBooking(bookingId: number, updatedBooking: any): Observable<any> {
     const url = `${this.baseUrl}/${bookingId}`;
     return this.http.put<any>(url, updatedBooking);
+  }
+
+  deleteRentBooking(bookingId: number): Observable<any> {
+    const url = `${this.baseUrl}/${bookingId}`;
+    return this.http.delete<any>(url);
   }
 
   // END

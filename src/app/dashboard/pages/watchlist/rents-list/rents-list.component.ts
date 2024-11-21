@@ -8,6 +8,8 @@ import { RentPackageService } from '../../../../services/rent-package.service';
 import { map } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ShowRentsComponent } from '../../../../packages/show-rents/show-rents.component';
+import { BookingService } from '../../../../services/booking.service';
+
 
 @Component({
   selector: 'app-rents-list',
@@ -24,7 +26,7 @@ export class RentsListComponent {
     'rentPrice',
     'rentLocation',
     'rentImages',
-    'action'
+    // 'action'
     
   ];
 
@@ -34,6 +36,7 @@ export class RentsListComponent {
   constructor(private rentPackageService:RentPackageService,
     public imagesDialog: MatDialog,
     private imageProcessingService:ImageProcessingService,
+    private bookingService:BookingService,
   ){
 
   }
@@ -78,6 +81,11 @@ export class RentsListComponent {
     });
   }
 
-  delete(id:any){}
+  delete(rentPackageId:any){
+    this.rentPackageService.deleteRentPackage(rentPackageId).subscribe(data =>{
+      this.dataSource2;
+      this.getAllRentPackages;
+    });
+  }
 
 }

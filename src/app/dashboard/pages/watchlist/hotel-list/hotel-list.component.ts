@@ -25,7 +25,7 @@ export class HotelListComponent implements OnInit{
     'hotelPrice',
     'hotelLocation',
     'hotelImages',
-    'action',
+    // 'action',
     
   ];
 

@@ -19,4 +19,10 @@ export class ShoppPackageService {
   getAllShoppingPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllShoppPackages`);
  }
+
+ deleteShopPackage(shoppingPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${shoppingPackageId}`);
+ }
+
+
 }

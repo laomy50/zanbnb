@@ -24,7 +24,7 @@ export class ShoppListComponent {
     'shoppingPrice',
     'shoppingLocation',
     'shoppingImages',
-    'action',
+    // 'action',
     
   ];
 

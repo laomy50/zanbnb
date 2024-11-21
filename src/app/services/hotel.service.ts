@@ -19,4 +19,9 @@ export class HotelService {
   getAllHotelPackage():Observable<any[]>{
     return  this.httpClient.get<any[]>(`${this.baseUrl}/getAllHotelPackages`);
  }
+
+ deleteHotelPackage(hotelPackageId:any):Observable<any>{
+  return this.httpClient.delete(`${this.baseUrl}/${hotelPackageId}`);
+ }
+
 }

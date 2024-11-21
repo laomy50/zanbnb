@@ -25,7 +25,7 @@ export class RestaurantListComponent implements OnInit{
     'restaurantPrice',
     'restaurantLocation',
     'restaurantImages',
-    'action'
+    // 'action'
     
   ];
 
