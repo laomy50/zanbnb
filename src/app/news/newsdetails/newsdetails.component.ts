@@ -39,7 +39,8 @@ export class NewsdetailsComponent implements OnInit {
     if (this.selectedDate) {
       this.newsService.getNewsByDate(this.selectedDate).subscribe({
         next: (news) => {
-          this.newsList = news;
+          this.newsList = news.map(news => this.imageProcessingService.createNewsImages(news));
+          console.log(news);
         },
         error: (err) => {
           console.error('Error fetching news:', err);
