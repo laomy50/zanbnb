@@ -1,0 +1,31 @@
+.news-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  .news-image {
+    width: 100%;         
+    height: auto;        
+    object-fit: cover;    
+    border-radius: 4px;   
+  }
+  .image-container {
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  mat-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  mat-card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  mat-card-content p {
+    color: #555;
+  }
+  mat-card-actions button {
+    margin-right: 8px;
+  }
+  

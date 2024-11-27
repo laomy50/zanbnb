@@ -18,6 +18,7 @@ import { MyordersComponent } from './clientcomponent/myorders/myorders.component
 import { AllpackagesComponent } from './staffcomponent/allpackages/allpackages.component';
 import { UsermanagementComponent } from './staffcomponent/usermanagement/usermanagement.component';
 import { AllordersComponent } from './staffcomponent/allorders/allorders.component';
+import { NewsdetailsComponent } from './news/newsdetails/newsdetails.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'',component:LinkerComponent,
   children:[
     {path:'',component:LandingComponent},
+    {path:'news',component:NewsdetailsComponent}
 
   ]
 },

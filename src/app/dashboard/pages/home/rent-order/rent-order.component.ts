@@ -66,7 +66,7 @@ if (loggedUser) {
     this.rentsService.getAllRentPackage()
       .subscribe(
         (data) => {
-          this.rents = data.map(rent => this.imageProcessingService.createRentImages(rent));
+          this.rents = data.map(rent  => this.imageProcessingService.createRentImages(rent));
           console.log(data);
   
           // to set the first rentPackageId

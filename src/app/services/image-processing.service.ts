@@ -13,6 +13,7 @@ import { TransportPackage } from '../model/transport-package';
 import { TripPackage } from '../model/trip-package';
 import { BeachPackage } from '../model/beach-package';
 import { ForestPackage } from '../model/forest-package';
+import { News } from '../model/news';
 
 @Injectable({
   providedIn: 'root'
@@ -272,6 +273,29 @@ export class ImageProcessingService {
     tripPackage.tripImages = tripImagesToFileHandle;
     return tripPackage;
   }
+
+    // news
+    public createNewsImages(news:News){
+      const images: any = news.images;
+  
+      const newsImagesToFileHandle: RentFileHandle[] = [];
+  
+      for(let i = 0; i < images.length; i++){
+        const imageFileData = images[i];
+  
+        const imageBlob = this.dataURItoBlob(imageFileData.picByte, imageFileData.type);
+        const imageFile = new File([imageBlob], imageFileData.name, {type: imageFileData.type});
+        const finalFileHndle :RentFileHandle = {
+          file: imageFile,
+          url: this.sanitizer.bypassSecurityTrustUrl(window.URL.createObjectURL(imageFile))
+        };
+  
+        newsImagesToFileHandle.push(finalFileHndle);
+      }
+  
+      news.images = newsImagesToFileHandle;
+      return news;
+    }
 
 
   public dataURItoBlob(picBytes:any,imageType:any){

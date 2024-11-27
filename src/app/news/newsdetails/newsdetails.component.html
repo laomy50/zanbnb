@@ -1,0 +1,55 @@
+<div class="container mt-4" style="margin-bottom: 120px;">
+  <!-- Page Title -->
+  <h2 class="text-center mb-4 text-primary">Latest News</h2>
+
+  <!-- Date Filter -->
+  <div class="mb-4">
+    <label for="newsDate" class="form-label">Filter News by Date</label>
+    <input
+      type="text"
+      id="newsDate"
+      [(ngModel)]="selectedDate"
+      (change)="loadNewsByDate()"
+      class="form-control"
+      placeholder="YYYY-MM-DD"
+    />
+  </div>
+
+  <!-- News Cards -->
+  <div class="row">
+    <div *ngIf="newsList.length === 0" class="text-center text-muted">
+      No news available for the selected date.
+    </div>
+
+    <div
+      class="col-lg-4 col-md-6 col-sm-12 mb-4"
+      *ngFor="let news of newsList"
+    >
+      <mat-card class="shadow-sm h-100">
+        <div class="image-container">
+          <img
+            mat-card-image
+            [src]="news.images?.[0]?.url || 'assets/placeholder.jpg'"
+            alt="News Image"
+            class="news-image"
+          />
+        </div>
+        <mat-card-header>
+          <mat-card-title>{{ news.title }}</mat-card-title>
+          <mat-card-subtitle>{{ news.date | date: 'yyyy-MM-dd' }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ news.content | slice: 0:100 }}...</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <!-- Uncomment buttons as needed -->
+          <!--
+          <button mat-raised-button color="primary" (click)="viewNews(news.id)">View</button>
+          <button mat-raised-button color="accent" (click)="editNews(news.id)">Edit</button>
+          <button mat-raised-button color="warn" (click)="deleteNews(news.id)">Delete</button>
+          -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

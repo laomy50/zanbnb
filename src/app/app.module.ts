@@ -116,6 +116,10 @@ import { MyspiceorderComponent } from './clientcomponent/myspiceorder/myspiceord
 import { MysportorderComponent } from './clientcomponent/mysportorder/mysportorder.component';
 import { MytransportorderComponent } from './clientcomponent/mytransportorder/mytransportorder.component';
 import { MytriporderComponent } from './clientcomponent/mytriporder/mytriporder.component';
+import { NewsdetailsComponent } from './news/newsdetails/newsdetails.component';
+import { NewsComponent } from './model/news/news.component';
+import { DatePipe } from '@angular/common';
+
 
 
 
@@ -208,7 +212,9 @@ import { MytriporderComponent } from './clientcomponent/mytriporder/mytriporder.
     MyspiceorderComponent,
     MysportorderComponent,
     MytransportorderComponent,
-    MytriporderComponent
+    MytriporderComponent,
+    NewsdetailsComponent,
+    NewsComponent
 
    
   ],
@@ -245,7 +251,8 @@ import { MytriporderComponent } from './clientcomponent/mytriporder/mytriporder.
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideNativeDateAdapter()
+    provideNativeDateAdapter(),
+    DatePipe 
   ],
   bootstrap: [AppComponent]
 })

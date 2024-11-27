@@ -1,1 +1,59 @@
-<p>message works!</p>
+<div class="container mt-5">
+    <div class="card p-2">
+        <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <form #newsForm="ngForm" (ngSubmit)="addNews(newsForm)">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Title</mat-label>
+                        <input matInput placeholder="Title" type="text" [(ngModel)]="news.title" name="title">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Date</mat-label>
+                        <input matInput placeholder="Date" type="date" [(ngModel)]="news.date" name="date">
+                      </mat-form-field>
+  
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Content</mat-label>
+                        <textarea matInput placeholder="Content" type="text" [(ngModel)]="news.content" name="content"></textarea>
+                    </mat-form-field>
+  
+    
+  
+                    <div class="d-flex justify-content-end">
+                        <button mat-stroked-button color="primary" style="margin-right: 8px;">Clear</button>
+                        <button mat-stroked-button color="primary" type="submit">Add News</button>
+                    </div>
+                </form>
+            </div>
+  
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <div class="dropzone" appDrag (files)="fileDropped($event)">
+                        <div class="text-wrapper">
+                            <div class="centered">
+                                Drag and drop your file or 
+                                <a (click)="selectFile.click()" class="browse-button">browse</a>
+                                a file
+                            </div>              
+                        </div>
+                    </div>
+  
+                    <input type="file" multiple value="select" #selectFile style="display: none;" (change)="onFileSelected($event)">
+                </div>
+                
+                <div class="row">
+                    <mat-grid-list cols="4" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let file of news.images; let i = index">
+                            <div style="position: relative;">
+                                <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                <img [src]="file.url" width="100px" height="100px">
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
