@@ -6,10 +6,10 @@
     <mat-toolbar style="background-color:#00CED1;">Menu</mat-toolbar>
     <mat-nav-list>
       <!-- Admin Menu -->
-      <a mat-list-item  routerLink="/memberArea/dash">
+      <!-- <a mat-list-item  routerLink="/memberArea/dash">
         <mat-icon>dashboard</mat-icon>
         Dashboard
-      </a>
+      </a> -->
 
       <a mat-list-item  routerLink="/memberArea/allpackages">
         <mat-icon>book</mat-icon>
@@ -52,10 +52,10 @@
         WatchList
       </a> -->
 
-      <a mat-list-item routerLink="/memberArea/orders">
+      <!-- <a mat-list-item routerLink="/memberArea/orders">
         <mat-icon>folder</mat-icon>
         Orders
-      </a>
+      </a> -->
       <!-- end -->
       
       <a mat-list-item routerLink="/memberArea/account">
@@ -75,7 +75,7 @@
         <mat-icon>help</mat-icon>
         Help Center
       </a>
-      <a mat-list-item href="#">
+      <a mat-list-item (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
         Logout
       </a>

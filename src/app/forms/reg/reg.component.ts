@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { User } from '../../model/user';
 import { UserServiceService } from '../../services/user-service.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reg',
@@ -11,6 +12,8 @@ import { Router } from '@angular/router';
 })
 export class RegComponent {
 
+  regform!:FormGroup;
+  fullYear:any;
   
   username!: string;
   fname!: string;
@@ -25,6 +28,18 @@ export class RegComponent {
     private router: Router,
     ){}
   ngOnInit(): void {
+
+    this.fullYear = new Date().getFullYear();
+
+    this.regform = new FormGroup({
+      password: new FormControl("", [Validators.required]),
+      username: new FormControl("", [Validators.required]),
+      firstName: new FormControl("", [Validators.required]),
+      lastName: new FormControl("", [Validators.required]),
+      phoneNumber: new FormControl("", [Validators.required]),
+      email: new FormControl("", [Validators.required, Validators.email]),
+      roleId: new FormControl(2, [Validators.required]),
+    });
   
   }
 
@@ -54,5 +69,22 @@ export class RegComponent {
 
   reg() {
     console.log('Login button clicked');
+  }
+
+  signUp() {
+  
+  }
+  
+
+  signIn() {
+    this.router.navigate(['login-auth']);
+  }
+
+  register() {
+    this.router.navigate(['register-user']);
+  }
+
+  getAllRoles() {
+
   }
 }

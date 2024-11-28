@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { UserServiceService  } from '../../services/user-service.service';
 import { AuthService } from '../../services/Auth/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -27,7 +28,8 @@ export class ZanbnbComponent implements OnInit{
 
     userRole: any;
     constructor(private userServiceService: UserServiceService,
-      private authService: AuthService
+      private authService: AuthService,
+      private router:Router,
     ) {}
 
     ngOnInit(): void {
@@ -46,9 +48,17 @@ export class ZanbnbComponent implements OnInit{
     return this.authService.hasRole(role);
   }
 
-   
+  logout() {
+    sessionStorage.clear();
+    localStorage.clear();
+    if ('caches' in window) {
+      caches.keys().then(function (names) {
+        for (let name of names) caches.delete(name);
+      });
     }
-  
+    this.router.navigate([''])
+    }
+}
    
 
   
