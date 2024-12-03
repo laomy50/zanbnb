@@ -21,6 +21,7 @@ export class RegComponent {
   email!: string;
   password!: string;
 
+  selectedRole: number | undefined;
   user: User = new User();
   submitted = false;
 
@@ -38,7 +39,7 @@ export class RegComponent {
       lastName: new FormControl("", [Validators.required]),
       phoneNumber: new FormControl("", [Validators.required]),
       email: new FormControl("", [Validators.required, Validators.email]),
-      roleId: new FormControl(2, [Validators.required]),
+      role_ids: new FormControl('', [Validators.required]),
     });
   
   }
@@ -49,6 +50,8 @@ export class RegComponent {
   }
 
   save() {
+    this.user.role_ids = this.selectedRole ? [this.selectedRole] : [];
+    
     this.userServiceService
     .registerUser(this.user).subscribe(data => {
       console.log(data)
