@@ -19,7 +19,9 @@ import { AllpackagesComponent } from './staffcomponent/allpackages/allpackages.c
 import { UsermanagementComponent } from './staffcomponent/usermanagement/usermanagement.component';
 import { AllordersComponent } from './staffcomponent/allorders/allorders.component';
 import { NewsdetailsComponent } from './news/newsdetails/newsdetails.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './guard/auth.guard';
+
+
 
 
 
@@ -34,7 +36,7 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'reg',component:RegComponent},
 
-{path:'memberArea',component:ZanbnbComponent,  canActivate: [AuthGuard],
+{path:'memberArea',component:ZanbnbComponent,  canActivate: [AuthGuard] ,
 children:[
   {path:'',component:WatchlistComponent},
   {path:'help',component:HelpsComponent},

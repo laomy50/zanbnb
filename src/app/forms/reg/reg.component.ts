@@ -50,7 +50,7 @@ export class RegComponent {
   }
 
   save() {
-    this.user.role_ids = this.selectedRole ? [this.selectedRole] : [];
+    console.log('Selected Role IDs:', this.user.role_ids);
     
     this.userServiceService
     .registerUser(this.user).subscribe(data => {
@@ -67,7 +67,7 @@ export class RegComponent {
   }
 
   gotoList() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/reg']);
   }
 
   reg() {

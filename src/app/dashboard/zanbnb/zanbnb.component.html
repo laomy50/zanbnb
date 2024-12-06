@@ -11,17 +11,17 @@
         Dashboard
       </a> -->
 
-      <a mat-list-item  routerLink="/memberArea/allpackages">
+      <a *ngIf="userRole === 'aDmIn'" mat-list-item  routerLink="/memberArea/allpackages">
         <mat-icon>book</mat-icon>
         All Packages
       </a>
 
-      <a mat-list-item  routerLink="/memberArea/allorders">
+      <a *ngIf="userRole === 'aDmIn'" mat-list-item  routerLink="/memberArea/allorders">
         <mat-icon>folder</mat-icon>
         All Orders
       </a>
 
-      <a mat-list-item  routerLink="/memberArea/usermanagement">
+      <a *ngIf="userRole === 'aDmIn'" mat-list-item  routerLink="/memberArea/usermanagement">
         <mat-icon>account_circle</mat-icon>
         User Management
       </a>
@@ -31,18 +31,18 @@
         Trips
       </a> -->
       <!-- Custommer Menu -->
-      <a mat-list-item  routerLink="/memberArea/home">
+      <a *ngIf="userRole === 'cLiEnT' || userRole === 'BuSInesS'" mat-list-item  routerLink="/memberArea/home">
         <mat-icon>home</mat-icon>
         Home
       </a>
 
-      <a mat-list-item routerLink="/memberArea/myorders">
+      <a *ngIf="userRole === 'cLiEnT' || userRole === 'BuSInesS'" mat-list-item routerLink="/memberArea/myorders">
         <mat-icon>folder</mat-icon>
        My Orders
       </a>
       <!-- end -->
       <!-- Business Menu -->
-      <a mat-list-item routerLink="/memberArea/upload" >
+      <a *ngIf="userRole === 'BuSInesS'" mat-list-item routerLink="/memberArea/upload" >
         <mat-icon>perm_media</mat-icon>
         Upload
       </a>
@@ -62,7 +62,7 @@
         <mat-icon>account_circle</mat-icon>
         Account
       </a>
-      <a mat-list-item routerLink="/memberArea/message">
+      <a *ngIf="userRole === 'aDmIn'" mat-list-item routerLink="/memberArea/message">
         <mat-icon>message</mat-icon>
         News
       </a>

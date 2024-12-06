@@ -5,5 +5,5 @@ export class User {
       email!:string;
       username!:string;
       password!:string;
-      role_ids!:number[];
+      role_ids:number[]= [];
 }

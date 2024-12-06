@@ -26,7 +26,7 @@
                 <div class="single-column" style="position: relative; z-index: 9999;">
                     <mat-form-field class="full-width" style="width: 100%;">
                       <mat-label>Membership Type</mat-label>
-                      <mat-select placeholder="Select Membership" name="membershipType" [(ngModel)]="user.role_ids" required panelClass="custom-select-panel">
+                      <mat-select placeholder="Select Membership" name="membershipType" [(ngModel)]="user.role_ids" multiple  required panelClass="custom-select-panel">
                         <mat-option value="2">Client Member</mat-option>
                         <mat-option value="3">Business Member</mat-option>
                       </mat-select>

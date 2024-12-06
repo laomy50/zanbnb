@@ -26,22 +26,19 @@ export class ZanbnbComponent implements OnInit{
 
     // constructor(private userServiceService: UserServiceService) {}
 
-    userRole: any;
+    userRole: string = '';
     constructor(private userServiceService: UserServiceService,
       private authService: AuthService,
       private router:Router,
     ) {}
 
     ngOnInit(): void {
-      
-      // Retrieve the role value from session storage and parse it
-      const role = sessionStorage.getItem('userRole');
-      if (role !== null) {
-        this.userRole = JSON.parse(role);
-      } else {
-        this.userRole = {}; // Handle the null case as needed
+      // Retrieve the logged-in user from session storage
+      const storedUser = sessionStorage.getItem('logged user');
+      if (storedUser) {
+        const user = JSON.parse(storedUser);
+        this.userRole = user.roles[0]; 
       }
-      console.log('User role:', this.userRole);
     }
 
   hasRole(role: string): boolean {
@@ -56,7 +53,7 @@ export class ZanbnbComponent implements OnInit{
         for (let name of names) caches.delete(name);
       });
     }
-    this.router.navigate([''])
+    this.router.navigate(['/login'])
     }
 }
    

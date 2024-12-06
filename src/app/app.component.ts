@@ -25,17 +25,17 @@ export class AppComponent implements OnInit{
   detectDevTools(): void {
     let threshold = 160; 
  
-    // const logout = () => {
-    //   sessionStorage.clear(); 
-    //   this.router.navigate(['/login']); 
-    // };
+    const logout = () => {
+      sessionStorage.clear(); 
+      this.router.navigate(['/login']); 
+    };
 
     setInterval(() => {
       if (
         window.outerWidth - window.innerWidth > threshold || 
         window.outerHeight - window.innerHeight > threshold
       ) {
-        // logout(); 
+        logout(); 
         sessionStorage.clear(); 
         localStorage.clear();
       }
